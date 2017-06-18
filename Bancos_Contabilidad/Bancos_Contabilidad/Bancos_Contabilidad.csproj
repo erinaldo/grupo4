@@ -52,6 +52,12 @@
     <Compile Include="frmActivosFijos.Designer.cs">
       <DependentUpon>frmActivosFijos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBalanceGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBalanceGeneral.Designer.cs">
+      <DependentUpon>frmBalanceGeneral.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmOrdenCompra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,12 @@
     </Compile>
     <Compile Include="frmPrincipalActivoFijo.Designer.cs">
       <DependentUpon>frmPrincipalActivoFijo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipalEstadosFinancieros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipalEstadosFinancieros.Designer.cs">
+      <DependentUpon>frmPrincipalEstadosFinancieros.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipalInventarios.cs">
       <SubType>Form</SubType>
@@ -105,11 +117,17 @@
     <EmbeddedResource Include="frmActivosFijos.resx">
       <DependentUpon>frmActivosFijos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBalanceGeneral.resx">
+      <DependentUpon>frmBalanceGeneral.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmOrdenCompra.resx">
       <DependentUpon>frmOrdenCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPasivosFijos.resx">
       <DependentUpon>frmPasivosFijos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipalEstadosFinancieros.resx">
+      <DependentUpon>frmPrincipalEstadosFinancieros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipalInventarios.resx">
       <DependentUpon>frmPrincipalInventarios.cs</DependentUpon>
