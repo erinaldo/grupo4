@@ -58,6 +58,12 @@
     <Compile Include="frmBalanceGeneral.Designer.cs">
       <DependentUpon>frmBalanceGeneral.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEstadosFinancieros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEstadosFinancieros.Designer.cs">
+      <DependentUpon>frmEstadosFinancieros.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmOrdenCompra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,12 +88,6 @@
     <Compile Include="frmPrincipalEstadosFinancieros.Designer.cs">
       <DependentUpon>frmPrincipalEstadosFinancieros.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPrincipalInventarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPrincipalInventarios.Designer.cs">
-      <DependentUpon>frmPrincipalInventarios.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmPrincipalPasivoFijo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,11 +106,11 @@
     <Compile Include="MenuPrincipal.Designer.cs">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="PrincipalOrdenCompra.cs">
+    <Compile Include="frmPrincipalOrdenCompra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PrincipalOrdenCompra.Designer.cs">
-      <DependentUpon>PrincipalOrdenCompra.cs</DependentUpon>
+    <Compile Include="frmPrincipalOrdenCompra.Designer.cs">
+      <DependentUpon>frmPrincipalOrdenCompra.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -120,6 +120,9 @@
     <EmbeddedResource Include="frmBalanceGeneral.resx">
       <DependentUpon>frmBalanceGeneral.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEstadosFinancieros.resx">
+      <DependentUpon>frmEstadosFinancieros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmOrdenCompra.resx">
       <DependentUpon>frmOrdenCompra.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,9 +131,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipalEstadosFinancieros.resx">
       <DependentUpon>frmPrincipalEstadosFinancieros.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmPrincipalInventarios.resx">
-      <DependentUpon>frmPrincipalInventarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipalActivoFijo.resx">
       <DependentUpon>frmPrincipalActivoFijo.cs</DependentUpon>
@@ -144,8 +144,8 @@
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PrincipalOrdenCompra.resx">
-      <DependentUpon>PrincipalOrdenCompra.cs</DependentUpon>
+    <EmbeddedResource Include="frmPrincipalOrdenCompra.resx">
+      <DependentUpon>frmPrincipalOrdenCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

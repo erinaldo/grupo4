@@ -7,3 +7,13 @@ C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\o
 C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.csproj.GenerateResource.Cache
 C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.exe
 C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.pdb
+C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmActivosFijos.resources
+C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmBalanceGeneral.resources
+C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmEstadosFinancieros.resources
+C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmOrdenCompra.resources
+C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmPasivosFijos.resources
+C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmPrincipalEstadosFinancieros.resources
+C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmPrincipalActivoFijo.resources
+C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmPrincipalPasivoFijo.resources
+C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.Login.resources
+C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmPrincipalOrdenCompra.resources
