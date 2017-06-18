@@ -375,6 +375,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.grupoFiltrar);
             this.Name = "frmBalanceGeneral";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BALANCE GENERAL";
             this.grupoFiltrar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

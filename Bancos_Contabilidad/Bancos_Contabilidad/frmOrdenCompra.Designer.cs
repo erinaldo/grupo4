@@ -176,6 +176,7 @@
             this.Controls.Add(this.grupoFiltrar);
             this.Controls.Add(this.txtNoOrden);
             this.Name = "frmOrdenCompra";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ORDEN DE COMPRA";
             this.grupoFiltrar.ResumeLayout(false);
             this.ResumeLayout(false);

@@ -16,5 +16,15 @@ namespace Bancos_Contabilidad
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (rbBalance.Checked)
+            {
+                frmBalanceGeneral fbg = new frmBalanceGeneral();
+                fbg.Show();
+                this.Hide();
+            }
+        }
     }
 }

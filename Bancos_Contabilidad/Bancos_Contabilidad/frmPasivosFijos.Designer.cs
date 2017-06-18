@@ -176,6 +176,7 @@
             this.Controls.Add(this.grupoFiltrar);
             this.Controls.Add(this.txtPasivo);
             this.Name = "frmPasivosFijos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pasivos No Corrientes";
             this.grupoFiltrar.ResumeLayout(false);
             this.ResumeLayout(false);

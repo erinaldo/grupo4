@@ -47,16 +47,16 @@
             this.cuentasPorPagarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.planillaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.alumnosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pasivosFijosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuentasPorCobrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuotaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.activosFijosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.catalogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.activosFijosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pasivosFijosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -192,6 +192,13 @@
             this.alumnosToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.alumnosToolStripMenuItem.Text = "Gastos";
             // 
+            // pasivosFijosToolStripMenuItem
+            // 
+            this.pasivosFijosToolStripMenuItem.Name = "pasivosFijosToolStripMenuItem";
+            this.pasivosFijosToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.pasivosFijosToolStripMenuItem.Text = "Pasivos Fijos";
+            this.pasivosFijosToolStripMenuItem.Click += new System.EventHandler(this.pasivosFijosToolStripMenuItem_Click);
+            // 
             // cuentasPorCobrarToolStripMenuItem
             // 
             this.cuentasPorCobrarToolStripMenuItem.Name = "cuentasPorCobrarToolStripMenuItem";
@@ -213,6 +220,13 @@
             this.cuotaToolStripMenuItem.Name = "cuotaToolStripMenuItem";
             this.cuotaToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.cuotaToolStripMenuItem.Text = "Ingresos";
+            // 
+            // activosFijosToolStripMenuItem
+            // 
+            this.activosFijosToolStripMenuItem.Name = "activosFijosToolStripMenuItem";
+            this.activosFijosToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.activosFijosToolStripMenuItem.Text = "Activos Fijos";
+            this.activosFijosToolStripMenuItem.Click += new System.EventHandler(this.activosFijosToolStripMenuItem_Click);
             // 
             // catalogosToolStripMenuItem
             // 
@@ -261,20 +275,6 @@
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // activosFijosToolStripMenuItem
-            // 
-            this.activosFijosToolStripMenuItem.Name = "activosFijosToolStripMenuItem";
-            this.activosFijosToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.activosFijosToolStripMenuItem.Text = "Activos Fijos";
-            this.activosFijosToolStripMenuItem.Click += new System.EventHandler(this.activosFijosToolStripMenuItem_Click);
-            // 
-            // pasivosFijosToolStripMenuItem
-            // 
-            this.pasivosFijosToolStripMenuItem.Name = "pasivosFijosToolStripMenuItem";
-            this.pasivosFijosToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.pasivosFijosToolStripMenuItem.Text = "Pasivos Fijos";
-            this.pasivosFijosToolStripMenuItem.Click += new System.EventHandler(this.pasivosFijosToolStripMenuItem_Click);
-            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,6 +284,7 @@
             this.IsMdiContainer = true;
             this.Name = "MenuPrincipal";
             this.Text = "MENU";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

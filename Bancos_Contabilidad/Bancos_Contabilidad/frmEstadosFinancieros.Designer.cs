@@ -30,9 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.rbBalance = new System.Windows.Forms.RadioButton();
+            this.rbEstado = new System.Windows.Forms.RadioButton();
+            this.btnGenerar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -65,48 +65,50 @@
             this.comboBox1.Size = new System.Drawing.Size(184, 21);
             this.comboBox1.TabIndex = 1;
             // 
-            // radioButton1
+            // rbBalance
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(228, 17);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(104, 17);
-            this.radioButton1.TabIndex = 2;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Balance General";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbBalance.AutoSize = true;
+            this.rbBalance.Location = new System.Drawing.Point(228, 17);
+            this.rbBalance.Name = "rbBalance";
+            this.rbBalance.Size = new System.Drawing.Size(104, 17);
+            this.rbBalance.TabIndex = 2;
+            this.rbBalance.TabStop = true;
+            this.rbBalance.Text = "Balance General";
+            this.rbBalance.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbEstado
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(228, 41);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(124, 17);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Estado de Resultado";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbEstado.AutoSize = true;
+            this.rbEstado.Location = new System.Drawing.Point(228, 41);
+            this.rbEstado.Name = "rbEstado";
+            this.rbEstado.Size = new System.Drawing.Size(124, 17);
+            this.rbEstado.TabIndex = 3;
+            this.rbEstado.TabStop = true;
+            this.rbEstado.Text = "Estado de Resultado";
+            this.rbEstado.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnGenerar
             // 
-            this.button1.Location = new System.Drawing.Point(115, 75);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Generar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnGenerar.Location = new System.Drawing.Point(115, 75);
+            this.btnGenerar.Name = "btnGenerar";
+            this.btnGenerar.Size = new System.Drawing.Size(130, 23);
+            this.btnGenerar.TabIndex = 4;
+            this.btnGenerar.Text = "Generar";
+            this.btnGenerar.UseVisualStyleBackColor = true;
+            this.btnGenerar.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmEstadosFinancieros
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(358, 110);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.btnGenerar);
+            this.Controls.Add(this.rbEstado);
+            this.Controls.Add(this.rbBalance);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label1);
             this.Name = "frmEstadosFinancieros";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEstadosFinancieros";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -117,8 +119,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RadioButton rbBalance;
+        private System.Windows.Forms.RadioButton rbEstado;
+        private System.Windows.Forms.Button btnGenerar;
     }
 }
