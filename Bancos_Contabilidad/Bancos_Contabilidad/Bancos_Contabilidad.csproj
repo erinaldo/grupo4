@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmActivosFijos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmActivosFijos.Designer.cs">
+      <DependentUpon>frmActivosFijos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInventarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,11 +64,29 @@
     <Compile Include="frmOrdenCompra.Designer.cs">
       <DependentUpon>frmOrdenCompra.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPasivosFijos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPasivosFijos.Designer.cs">
+      <DependentUpon>frmPasivosFijos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipalActivoFijo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipalActivoFijo.Designer.cs">
+      <DependentUpon>frmPrincipalActivoFijo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipalInventarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPrincipalInventarios.Designer.cs">
       <DependentUpon>frmPrincipalInventarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipalPasivoFijo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipalPasivoFijo.Designer.cs">
+      <DependentUpon>frmPrincipalPasivoFijo.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -84,14 +108,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmActivosFijos.resx">
+      <DependentUpon>frmActivosFijos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmInventarios.resx">
       <DependentUpon>frmInventarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmOrdenCompra.resx">
       <DependentUpon>frmOrdenCompra.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPasivosFijos.resx">
+      <DependentUpon>frmPasivosFijos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipalInventarios.resx">
       <DependentUpon>frmPrincipalInventarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipalActivoFijo.resx">
+      <DependentUpon>frmPrincipalActivoFijo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipalPasivoFijo.resx">
+      <DependentUpon>frmPrincipalPasivoFijo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
