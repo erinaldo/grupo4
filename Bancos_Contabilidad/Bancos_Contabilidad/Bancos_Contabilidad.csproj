@@ -52,12 +52,6 @@
     <Compile Include="frmActivosFijos.Designer.cs">
       <DependentUpon>frmActivosFijos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmInventarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmInventarios.Designer.cs">
-      <DependentUpon>frmInventarios.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmOrdenCompra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,9 +104,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmActivosFijos.resx">
       <DependentUpon>frmActivosFijos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmInventarios.resx">
-      <DependentUpon>frmInventarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmOrdenCompra.resx">
       <DependentUpon>frmOrdenCompra.cs</DependentUpon>
