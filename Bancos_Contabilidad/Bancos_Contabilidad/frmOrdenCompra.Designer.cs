@@ -30,9 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmOrdenCompra));
             this.label1 = new System.Windows.Forms.Label();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.txtTotal = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.grupoFiltrar = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -42,7 +40,7 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtNoOrden = new System.Windows.Forms.TextBox();
             this.grupoFiltrar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,40 +50,19 @@
             this.label1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(5, 70);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 17);
+            this.label1.Size = new System.Drawing.Size(79, 17);
             this.label1.TabIndex = 130;
-            this.label1.Text = "Nombre:";
+            this.label1.Text = "No. Orden:";
             // 
-            // txtTelefono
+            // txtTotal
             // 
-            this.txtTelefono.Enabled = false;
-            this.txtTelefono.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefono.Location = new System.Drawing.Point(96, 129);
-            this.txtTelefono.MaxLength = 8;
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(277, 25);
-            this.txtTelefono.TabIndex = 126;
-            this.txtTelefono.Tag = "telefono";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(5, 134);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 17);
-            this.label5.TabIndex = 129;
-            this.label5.Text = "Telefono:";
-            // 
-            // txtDireccion
-            // 
-            this.txtDireccion.Enabled = false;
-            this.txtDireccion.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(96, 98);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(277, 25);
-            this.txtDireccion.TabIndex = 125;
-            this.txtDireccion.Tag = "direccion";
+            this.txtTotal.Enabled = false;
+            this.txtTotal.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotal.Location = new System.Drawing.Point(96, 98);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(277, 25);
+            this.txtTotal.TabIndex = 125;
+            this.txtTotal.Tag = "direccion";
             // 
             // label4
             // 
@@ -93,9 +70,9 @@
             this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(5, 101);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 17);
+            this.label4.Size = new System.Drawing.Size(42, 17);
             this.label4.TabIndex = 128;
-            this.label4.Text = "Direccion:";
+            this.label4.Text = "Total:";
             // 
             // grupoFiltrar
             // 
@@ -178,28 +155,26 @@
             this.btnNuevo.TabIndex = 5;
             this.btnNuevo.UseVisualStyleBackColor = true;
             // 
-            // txtNombre
+            // txtNoOrden
             // 
-            this.txtNombre.Enabled = false;
-            this.txtNombre.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(96, 67);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(277, 25);
-            this.txtNombre.TabIndex = 124;
-            this.txtNombre.Tag = "nombre";
+            this.txtNoOrden.Enabled = false;
+            this.txtNoOrden.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNoOrden.Location = new System.Drawing.Point(96, 67);
+            this.txtNoOrden.Name = "txtNoOrden";
+            this.txtNoOrden.Size = new System.Drawing.Size(277, 25);
+            this.txtNoOrden.TabIndex = 124;
+            this.txtNoOrden.Tag = "nombre";
             // 
             // frmOrdenCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(388, 170);
+            this.ClientSize = new System.Drawing.Size(388, 139);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtTelefono);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtDireccion);
+            this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.grupoFiltrar);
-            this.Controls.Add(this.txtNombre);
+            this.Controls.Add(this.txtNoOrden);
             this.Name = "frmOrdenCompra";
             this.Text = "ORDEN DE COMPRA";
             this.grupoFiltrar.ResumeLayout(false);
@@ -211,9 +186,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.Label label5;
-        public System.Windows.Forms.TextBox txtDireccion;
+        public System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox grupoFiltrar;
         private System.Windows.Forms.Button button1;
@@ -223,6 +196,6 @@
         public System.Windows.Forms.Button btnEliminar;
         public System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnNuevo;
-        public System.Windows.Forms.TextBox txtNombre;
+        public System.Windows.Forms.TextBox txtNoOrden;
     }
 }

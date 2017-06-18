@@ -61,9 +61,9 @@
             // 
             this.txtDireccion.Enabled = false;
             this.txtDireccion.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccion.Location = new System.Drawing.Point(100, 103);
+            this.txtDireccion.Location = new System.Drawing.Point(114, 103);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(277, 25);
+            this.txtDireccion.Size = new System.Drawing.Size(263, 25);
             this.txtDireccion.TabIndex = 132;
             this.txtDireccion.Tag = "direccion";
             // 
@@ -73,9 +73,9 @@
             this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(9, 106);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 17);
+            this.label4.Size = new System.Drawing.Size(103, 17);
             this.label4.TabIndex = 135;
-            this.label4.Text = "Valor:";
+            this.label4.Text = "Valor en libros:";
             // 
             // grupoFiltrar
             // 
@@ -162,9 +162,9 @@
             // 
             this.txtActivo.Enabled = false;
             this.txtActivo.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtActivo.Location = new System.Drawing.Point(100, 72);
+            this.txtActivo.Location = new System.Drawing.Point(114, 72);
             this.txtActivo.Name = "txtActivo";
-            this.txtActivo.Size = new System.Drawing.Size(277, 25);
+            this.txtActivo.Size = new System.Drawing.Size(263, 25);
             this.txtActivo.TabIndex = 131;
             this.txtActivo.Tag = "nombre";
             // 
