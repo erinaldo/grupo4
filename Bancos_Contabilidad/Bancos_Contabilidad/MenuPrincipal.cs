@@ -21,5 +21,29 @@ namespace Bancos_Contabilidad
         {
 
         }
+
+        private void ordenDeCompraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPrincipalOrdenCompra fpoc = new frmPrincipalOrdenCompra();
+            fpoc.Show();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmPrincipalEstadosFinancieros fpef = new frmPrincipalEstadosFinancieros();
+            fpef.Show();
+        }
+
+        private void activosFijosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPrincipalActivoFijo fpaf = new frmPrincipalActivoFijo();
+            fpaf.Show();
+        }
+
+        private void pasivosFijosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPrincipalPasivoFijo fppf = new frmPrincipalPasivoFijo();
+            fppf.Show();
+        }
     }
 }

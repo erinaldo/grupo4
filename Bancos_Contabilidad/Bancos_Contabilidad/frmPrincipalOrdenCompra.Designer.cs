@@ -1,6 +1,6 @@
 ﻿namespace Bancos_Contabilidad
 {
-    partial class PrincipalOrdenCompra
+    partial class frmPrincipalOrdenCompra
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrincipalOrdenCompra));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipalOrdenCompra));
             this.grdEmpresa = new System.Windows.Forms.DataGridView();
             this.cmbBuscar = new System.Windows.Forms.ComboBox();
             this.grupoFiltrar = new System.Windows.Forms.GroupBox();
@@ -160,6 +160,7 @@
             this.btnNuevo.Size = new System.Drawing.Size(48, 42);
             this.btnNuevo.TabIndex = 17;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // z
             // 
@@ -172,14 +173,14 @@
             this.z.TabIndex = 2;
             this.z.Text = "ORDEN DE COMPRA";
             // 
-            // PrincipalOrdenCompra
+            // frmPrincipalOrdenCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(874, 320);
             this.Controls.Add(this.grdEmpresa);
             this.Controls.Add(this.grupoFiltrar);
-            this.Name = "PrincipalOrdenCompra";
+            this.Name = "frmPrincipalOrdenCompra";
             this.Text = "ORDEN DE COMPRA";
             ((System.ComponentModel.ISupportInitialize)(this.grdEmpresa)).EndInit();
             this.grupoFiltrar.ResumeLayout(false);

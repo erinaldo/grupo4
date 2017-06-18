@@ -16,5 +16,11 @@ namespace Bancos_Contabilidad
         {
             InitializeComponent();
         }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            frmPasivosFijos fpf = new frmPasivosFijos();
+            fpf.Show();
+        }
     }
 }
