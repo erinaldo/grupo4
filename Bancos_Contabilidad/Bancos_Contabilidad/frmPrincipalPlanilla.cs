@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Bancos_Contabilidad
 {
-    public partial class frmPrincipalVentas : Form
+    public partial class frmPrincipalPlanilla : Form
     {
-        public frmPrincipalVentas()
+        public frmPrincipalPlanilla()
         {
             InitializeComponent();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            frmVentas Menu = new frmVentas();
+            frmPlanilla Menu = new frmPlanilla();
             Menu.Show();
         }
     }

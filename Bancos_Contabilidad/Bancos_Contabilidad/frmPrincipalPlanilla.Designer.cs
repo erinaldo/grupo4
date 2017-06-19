@@ -1,6 +1,6 @@
 ﻿namespace Bancos_Contabilidad
 {
-    partial class frmPrincipalVentas
+    partial class frmPrincipalPlanilla
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipalVentas));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipalPlanilla));
             this.grdEmpresa = new System.Windows.Forms.DataGridView();
             this.grupoFiltrar = new System.Windows.Forms.GroupBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
@@ -54,8 +54,8 @@
             this.grdEmpresa.Name = "grdEmpresa";
             this.grdEmpresa.ReadOnly = true;
             this.grdEmpresa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdEmpresa.Size = new System.Drawing.Size(706, 230);
-            this.grdEmpresa.TabIndex = 32;
+            this.grdEmpresa.Size = new System.Drawing.Size(644, 194);
+            this.grdEmpresa.TabIndex = 26;
             // 
             // grupoFiltrar
             // 
@@ -72,8 +72,8 @@
             this.grupoFiltrar.Dock = System.Windows.Forms.DockStyle.Top;
             this.grupoFiltrar.Location = new System.Drawing.Point(0, 0);
             this.grupoFiltrar.Name = "grupoFiltrar";
-            this.grupoFiltrar.Size = new System.Drawing.Size(706, 92);
-            this.grupoFiltrar.TabIndex = 31;
+            this.grupoFiltrar.Size = new System.Drawing.Size(644, 92);
+            this.grupoFiltrar.TabIndex = 25;
             this.grupoFiltrar.TabStop = false;
             this.grupoFiltrar.Text = "MENU";
             // 
@@ -167,22 +167,22 @@
             this.z.AutoSize = true;
             this.z.Dock = System.Windows.Forms.DockStyle.Right;
             this.z.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.z.Location = new System.Drawing.Point(548, 16);
+            this.z.Location = new System.Drawing.Point(464, 16);
             this.z.Name = "z";
-            this.z.Size = new System.Drawing.Size(155, 39);
+            this.z.Size = new System.Drawing.Size(177, 39);
             this.z.TabIndex = 2;
-            this.z.Text = "VENTAS";
+            this.z.Text = "PLANILLA";
             // 
-            // frmPrincipalVentas
+            // frmPrincipalPlanilla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(706, 322);
+            this.ClientSize = new System.Drawing.Size(644, 286);
             this.Controls.Add(this.grdEmpresa);
             this.Controls.Add(this.grupoFiltrar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmPrincipalVentas";
-            this.Text = "PrincipalVentas";
+            this.Name = "frmPrincipalPlanilla";
+            this.Text = "PrincipalPlanilla";
             ((System.ComponentModel.ISupportInitialize)(this.grdEmpresa)).EndInit();
             this.grupoFiltrar.ResumeLayout(false);
             this.grupoFiltrar.PerformLayout();
