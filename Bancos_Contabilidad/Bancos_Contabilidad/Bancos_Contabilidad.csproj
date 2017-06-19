@@ -94,6 +94,12 @@
     <Compile Include="frmPrincipalPasivoFijo.Designer.cs">
       <DependentUpon>frmPrincipalPasivoFijo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPrincipalVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipalVentas.Designer.cs">
+      <DependentUpon>frmPrincipalVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
