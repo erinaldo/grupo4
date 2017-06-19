@@ -17,3 +17,6 @@ C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\o
 C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmPrincipalPasivoFijo.resources
 C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.Login.resources
 C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmPrincipalOrdenCompra.resources
+C:\Users\Gomez\Documents\GitHub\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\bin\Debug\Bancos_Contabilidad.exe.config
+C:\Users\Gomez\Documents\GitHub\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.exe
+C:\Users\Gomez\Documents\GitHub\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.pdb

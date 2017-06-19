@@ -108,13 +108,13 @@
             this.transaccionalesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.conciliacionToolStripMenuItem});
             this.transaccionalesToolStripMenuItem.Name = "transaccionalesToolStripMenuItem";
-            this.transaccionalesToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.transaccionalesToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.transaccionalesToolStripMenuItem.Text = "Transaccionales";
             // 
             // actividadesToolStripMenuItem
             // 
             this.actividadesToolStripMenuItem.Name = "actividadesToolStripMenuItem";
-            this.actividadesToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.actividadesToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.actividadesToolStripMenuItem.Text = "Cuentas";
             // 
             // procesosToolStripMenuItem
@@ -159,7 +159,7 @@
             this.cierreContableToolStripMenuItem,
             this.estadoDeResultadosToolStripMenuItem1});
             this.transaccionesToolStripMenuItem.Name = "transaccionesToolStripMenuItem";
-            this.transaccionesToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.transaccionesToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.transaccionesToolStripMenuItem.Text = "Transaccionales";
             // 
             // ordenDeCompraToolStripMenuItem
@@ -180,6 +180,7 @@
             this.planillaToolStripMenuItem.Name = "planillaToolStripMenuItem";
             this.planillaToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.planillaToolStripMenuItem.Text = "Planilla";
+            this.planillaToolStripMenuItem.Click += new System.EventHandler(this.planillaToolStripMenuItem_Click);
             // 
             // alumnosToolStripMenuItem
             // 
@@ -189,7 +190,7 @@
             this.ordenDeCompraToolStripMenuItem,
             this.pasivosFijosToolStripMenuItem});
             this.alumnosToolStripMenuItem.Name = "alumnosToolStripMenuItem";
-            this.alumnosToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.alumnosToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.alumnosToolStripMenuItem.Text = "Gastos";
             // 
             // pasivosFijosToolStripMenuItem
@@ -210,6 +211,7 @@
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
             this.ventasToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.ventasToolStripMenuItem.Text = "Ventas";
+            this.ventasToolStripMenuItem.Click += new System.EventHandler(this.ventasToolStripMenuItem_Click);
             // 
             // cuotaToolStripMenuItem
             // 
@@ -218,7 +220,7 @@
             this.cuentasPorCobrarToolStripMenuItem,
             this.activosFijosToolStripMenuItem});
             this.cuotaToolStripMenuItem.Name = "cuotaToolStripMenuItem";
-            this.cuotaToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.cuotaToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.cuotaToolStripMenuItem.Text = "Ingresos";
             // 
             // activosFijosToolStripMenuItem
