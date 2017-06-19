@@ -82,6 +82,18 @@
     <Compile Include="frmPrincipalPasivoFijo.Designer.cs">
       <DependentUpon>frmPrincipalPasivoFijo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPrincipalVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipalVentas.Designer.cs">
+      <DependentUpon>frmPrincipalVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentas.Designer.cs">
+      <DependentUpon>frmVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +131,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipalPasivoFijo.resx">
       <DependentUpon>frmPrincipalPasivoFijo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipalVentas.resx">
+      <DependentUpon>frmPrincipalVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVentas.resx">
+      <DependentUpon>frmVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

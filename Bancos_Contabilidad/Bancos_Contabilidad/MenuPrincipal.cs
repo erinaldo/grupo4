@@ -21,5 +21,13 @@ namespace Bancos_Contabilidad
         {
 
         }
+
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPrincipalVentas temp = new frmPrincipalVentas();
+            temp.WindowState = FormWindowState.Maximized;
+            temp.MdiParent = this;
+            temp.Show();
+        }
     }
 }
