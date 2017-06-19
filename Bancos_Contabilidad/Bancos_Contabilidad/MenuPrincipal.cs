@@ -53,5 +53,31 @@ namespace Bancos_Contabilidad
             fppf.MdiParent = this;
             fppf.Show();
         }
+
+        private void cuentasPorPagarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPrincipalCuentasxPagar fppf = new frmPrincipalCuentasxPagar();
+            fppf.WindowState = FormWindowState.Maximized;
+            fppf.MdiParent = this;
+            fppf.Show();
+        }
+
+        private void cuentasContablesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPrincipalTipoCuenta fppf = new frmPrincipalTipoCuenta();
+            fppf.WindowState = FormWindowState.Maximized;
+            fppf.MdiParent = this;
+            fppf.Show();
+        }
+
+        private void cierreContableToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Desea realizar el cierre contable para el mes de Junio 2017", "Cierre Contable",
+                 MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                == DialogResult.Yes)
+            {
+                
+            }
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace Bancos_Contabilidad
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MenuPrincipal());
+            Application.Run(new Login());
         }
     }
 }

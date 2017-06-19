@@ -53,6 +53,7 @@
             this.cuotaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.activosFijosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.catalogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cuentasContablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -138,6 +139,7 @@
             this.cierreContableToolStripMenuItem.Name = "cierreContableToolStripMenuItem";
             this.cierreContableToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
             this.cierreContableToolStripMenuItem.Text = "Cierre contable";
+            this.cierreContableToolStripMenuItem.Click += new System.EventHandler(this.cierreContableToolStripMenuItem_Click);
             // 
             // autorizacionesToolStripMenuItem
             // 
@@ -159,7 +161,7 @@
             this.cierreContableToolStripMenuItem,
             this.estadoDeResultadosToolStripMenuItem1});
             this.transaccionesToolStripMenuItem.Name = "transaccionesToolStripMenuItem";
-            this.transaccionesToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.transaccionesToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.transaccionesToolStripMenuItem.Text = "Transaccionales";
             // 
             // ordenDeCompraToolStripMenuItem
@@ -174,6 +176,7 @@
             this.cuentasPorPagarToolStripMenuItem.Name = "cuentasPorPagarToolStripMenuItem";
             this.cuentasPorPagarToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.cuentasPorPagarToolStripMenuItem.Text = "Cuentas por pagar";
+            this.cuentasPorPagarToolStripMenuItem.Click += new System.EventHandler(this.cuentasPorPagarToolStripMenuItem_Click);
             // 
             // planillaToolStripMenuItem
             // 
@@ -189,7 +192,7 @@
             this.ordenDeCompraToolStripMenuItem,
             this.pasivosFijosToolStripMenuItem});
             this.alumnosToolStripMenuItem.Name = "alumnosToolStripMenuItem";
-            this.alumnosToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.alumnosToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.alumnosToolStripMenuItem.Text = "Gastos";
             // 
             // pasivosFijosToolStripMenuItem
@@ -218,7 +221,7 @@
             this.cuentasPorCobrarToolStripMenuItem,
             this.activosFijosToolStripMenuItem});
             this.cuotaToolStripMenuItem.Name = "cuotaToolStripMenuItem";
-            this.cuotaToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.cuotaToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.cuotaToolStripMenuItem.Text = "Ingresos";
             // 
             // activosFijosToolStripMenuItem
@@ -233,11 +236,19 @@
             this.catalogosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cuotaToolStripMenuItem,
             this.alumnosToolStripMenuItem,
-            this.transaccionesToolStripMenuItem});
+            this.transaccionesToolStripMenuItem,
+            this.cuentasContablesToolStripMenuItem});
             this.catalogosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("catalogosToolStripMenuItem.Image")));
             this.catalogosToolStripMenuItem.Name = "catalogosToolStripMenuItem";
             this.catalogosToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
             this.catalogosToolStripMenuItem.Text = "Contabilidad";
+            // 
+            // cuentasContablesToolStripMenuItem
+            // 
+            this.cuentasContablesToolStripMenuItem.Name = "cuentasContablesToolStripMenuItem";
+            this.cuentasContablesToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.cuentasContablesToolStripMenuItem.Text = "Cuentas Contables";
+            this.cuentasContablesToolStripMenuItem.Click += new System.EventHandler(this.cuentasContablesToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem1
             // 
@@ -323,6 +334,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem activosFijosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pasivosFijosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cuentasContablesToolStripMenuItem;
     }
 }
 
