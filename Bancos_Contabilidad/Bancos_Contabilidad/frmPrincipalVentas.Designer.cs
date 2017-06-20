@@ -59,6 +59,7 @@
             // 
             // grupoFiltrar
             // 
+            this.grupoFiltrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.grupoFiltrar.Controls.Add(this.txtBuscar);
             this.grupoFiltrar.Controls.Add(this.cmbBuscar);
             this.grupoFiltrar.Controls.Add(this.btnBuscar);

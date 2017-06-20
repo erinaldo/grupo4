@@ -15,7 +15,11 @@ namespace Bancos_Contabilidad
         public MenuPrincipal()
         {
             InitializeComponent();
+            DateTime thisDay = DateTime.Now;
+            toolStripStatusLabel3.Text = thisDay.ToString();
         }
+
+        public static DateTime Today { get; }
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
@@ -134,6 +138,16 @@ namespace Bancos_Contabilidad
         private void cierreContableToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Desea realizar el cierre contable para el mes de Junio 2017", "Cierre Contable", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) ;
+        }
+
+        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            
+        }
+
+        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
