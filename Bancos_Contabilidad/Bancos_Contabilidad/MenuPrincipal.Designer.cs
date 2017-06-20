@@ -57,6 +57,8 @@
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.autorizacionesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.estadoDeCuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,9 +108,10 @@
             // transaccionalesToolStripMenuItem
             // 
             this.transaccionalesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.conciliacionToolStripMenuItem});
+            this.conciliacionToolStripMenuItem,
+            this.autorizacionesToolStripMenuItem1});
             this.transaccionalesToolStripMenuItem.Name = "transaccionalesToolStripMenuItem";
-            this.transaccionalesToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.transaccionalesToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.transaccionalesToolStripMenuItem.Text = "Transaccionales";
             // 
             // actividadesToolStripMenuItem
@@ -116,12 +119,14 @@
             this.actividadesToolStripMenuItem.Name = "actividadesToolStripMenuItem";
             this.actividadesToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.actividadesToolStripMenuItem.Text = "Cuentas";
+            this.actividadesToolStripMenuItem.Click += new System.EventHandler(this.actividadesToolStripMenuItem_Click);
             // 
             // procesosToolStripMenuItem
             // 
             this.procesosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.actividadesToolStripMenuItem,
-            this.transaccionalesToolStripMenuItem});
+            this.transaccionalesToolStripMenuItem,
+            this.estadoDeCuentaToolStripMenuItem});
             this.procesosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("procesosToolStripMenuItem.Image")));
             this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
             this.procesosToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
@@ -174,6 +179,7 @@
             this.cuentasPorPagarToolStripMenuItem.Name = "cuentasPorPagarToolStripMenuItem";
             this.cuentasPorPagarToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.cuentasPorPagarToolStripMenuItem.Text = "Cuentas por pagar";
+            this.cuentasPorPagarToolStripMenuItem.Click += new System.EventHandler(this.cuentasPorPagarToolStripMenuItem_Click);
             // 
             // planillaToolStripMenuItem
             // 
@@ -204,6 +210,7 @@
             this.cuentasPorCobrarToolStripMenuItem.Name = "cuentasPorCobrarToolStripMenuItem";
             this.cuentasPorCobrarToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.cuentasPorCobrarToolStripMenuItem.Text = "Cuentas por cobrar";
+            this.cuentasPorCobrarToolStripMenuItem.Click += new System.EventHandler(this.cuentasPorCobrarToolStripMenuItem_Click);
             // 
             // ventasToolStripMenuItem
             // 
@@ -275,6 +282,20 @@
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // autorizacionesToolStripMenuItem1
+            // 
+            this.autorizacionesToolStripMenuItem1.Name = "autorizacionesToolStripMenuItem1";
+            this.autorizacionesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.autorizacionesToolStripMenuItem1.Text = "Autorizaciones";
+            this.autorizacionesToolStripMenuItem1.Click += new System.EventHandler(this.autorizacionesToolStripMenuItem1_Click);
+            // 
+            // estadoDeCuentaToolStripMenuItem
+            // 
+            this.estadoDeCuentaToolStripMenuItem.Name = "estadoDeCuentaToolStripMenuItem";
+            this.estadoDeCuentaToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.estadoDeCuentaToolStripMenuItem.Text = "Estado de Cuenta";
+            this.estadoDeCuentaToolStripMenuItem.Click += new System.EventHandler(this.estadoDeCuentaToolStripMenuItem_Click);
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -323,6 +344,8 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem activosFijosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pasivosFijosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem autorizacionesToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem estadoDeCuentaToolStripMenuItem;
     }
 }
 
