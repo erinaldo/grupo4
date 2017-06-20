@@ -17,3 +17,13 @@ C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\o
 C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmPrincipalPasivoFijo.resources
 C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.Login.resources
 C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmPrincipalOrdenCompra.resources
+C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmAutorizacion.resources
+C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmCuenta.resources
+C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmCuentaPorCobrar.resources
+C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmCuentaPorPagar.resources
+C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmEstadoDeCuenta.resources
+C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmPrincipalAutorizacion.resources
+C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmPrincipalCuenta.resources
+C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmPrincipalCuentaPorCobrar.resources
+C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmPrincipalCuentaPorPagar.resources
+C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmPrincipalEstadoDeCuenta.resources

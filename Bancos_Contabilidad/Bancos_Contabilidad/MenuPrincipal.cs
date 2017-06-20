@@ -53,5 +53,45 @@ namespace Bancos_Contabilidad
             fppf.MdiParent = this;
             fppf.Show();
         }
+
+        private void cuentasPorPagarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPrincipalCuentaPorPagar cxp = new frmPrincipalCuentaPorPagar();
+            cxp.WindowState = FormWindowState.Maximized;
+            cxp.MdiParent = this;
+            cxp.Show();
+        }
+
+        private void cuentasPorCobrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPrincipalCuentaPorCobrar cxc = new frmPrincipalCuentaPorCobrar();
+            cxc.WindowState = FormWindowState.Maximized;
+            cxc.MdiParent = this;
+            cxc.Show();
+        }
+
+        private void actividadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPrincipalCuenta cuenta = new frmPrincipalCuenta();
+            cuenta.WindowState = FormWindowState.Maximized;
+            cuenta.MdiParent = this;
+            cuenta.Show();
+        }
+
+        private void autorizacionesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmPrincipalAutorizacion autorizacion = new frmPrincipalAutorizacion();
+            autorizacion.WindowState = FormWindowState.Maximized;
+            autorizacion.MdiParent = this;
+            autorizacion.Show();
+        }
+
+        private void estadoDeCuentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPrincipalEstadoDeCuenta cuenta = new frmPrincipalEstadoDeCuenta();
+            cuenta.WindowState = FormWindowState.Maximized;
+            cuenta.MdiParent = this;
+            cuenta.Show();
+        }
     }
 }

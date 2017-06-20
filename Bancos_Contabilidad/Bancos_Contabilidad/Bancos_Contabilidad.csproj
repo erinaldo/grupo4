@@ -130,6 +130,12 @@
     <Compile Include="frmPrincipalCuentaPorCobrar.designer.cs">
       <DependentUpon>frmPrincipalCuentaPorCobrar.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPrincipalCuentaPorPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipalCuentaPorPagar.designer.cs">
+      <DependentUpon>frmPrincipalCuentaPorPagar.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipalEstadoDeCuenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipalCuentaPorCobrar.resx">
       <DependentUpon>frmPrincipalCuentaPorCobrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipalCuentaPorPagar.resx">
+      <DependentUpon>frmPrincipalCuentaPorPagar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipalEstadoDeCuenta.resx">
       <DependentUpon>frmPrincipalEstadoDeCuenta.cs</DependentUpon>
