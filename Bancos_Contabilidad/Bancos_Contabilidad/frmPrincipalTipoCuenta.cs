@@ -10,18 +10,17 @@ using System.Windows.Forms;
 
 namespace Bancos_Contabilidad
 {
-    public partial class Login : Form
+    public partial class frmPrincipalTipoCuenta : Form
     {
-        public Login()
+        public frmPrincipalTipoCuenta()
         {
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void btnNuevo_Click(object sender, EventArgs e)
         {
-            MenuPrincipal mp = new MenuPrincipal();
-            mp.Show();
-            this.Hide();
+            frmTipoCuenta obj = new frmTipoCuenta();
+            obj.Show();
         }
     }
 }

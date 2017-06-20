@@ -27,3 +27,10 @@ C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\o
 C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmPrincipalCuentaPorCobrar.resources
 C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmPrincipalCuentaPorPagar.resources
 C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmPrincipalEstadoDeCuenta.resources
+C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmEstadoResultado.resources
+C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmPlanilla.resources
+C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmPrincipalPlanilla.resources
+C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmPrincipalVentas.resources
+C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmVentas.resources
+C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmPrincipalTipoCuenta.resources
+C:\Users\jrevm\Documents\Github\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmTipoCuenta.resources
