@@ -53,21 +53,5 @@ namespace Bancos_Contabilidad
             fppf.MdiParent = this;
             fppf.Show();
         }
-
-        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmPrincipalVentas temp = new frmPrincipalVentas();
-            temp.WindowState = FormWindowState.Maximized;
-            temp.MdiParent = this;
-            temp.Show();
-        }
-
-        private void planillaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmPrincipalPlanilla temp = new frmPrincipalPlanilla();
-            temp.WindowState = FormWindowState.Maximized;
-            temp.MdiParent = this;
-            temp.Show();
-        }
     }
 }
