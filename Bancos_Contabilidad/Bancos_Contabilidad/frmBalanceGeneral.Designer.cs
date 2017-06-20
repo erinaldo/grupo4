@@ -78,7 +78,7 @@
             this.grupoFiltrar.Dock = System.Windows.Forms.DockStyle.Top;
             this.grupoFiltrar.Location = new System.Drawing.Point(0, 0);
             this.grupoFiltrar.Name = "grupoFiltrar";
-            this.grupoFiltrar.Size = new System.Drawing.Size(414, 61);
+            this.grupoFiltrar.Size = new System.Drawing.Size(478, 61);
             this.grupoFiltrar.TabIndex = 135;
             this.grupoFiltrar.TabStop = false;
             this.grupoFiltrar.Text = "MENU";
@@ -351,6 +351,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(414, 741);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label16);
