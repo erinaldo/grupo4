@@ -93,5 +93,26 @@ namespace Bancos_Contabilidad
             cuenta.MdiParent = this;
             cuenta.Show();
         }
+
+        private void cuotaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ventasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPrincipalVentas cuenta = new frmPrincipalVentas();
+            cuenta.WindowState = FormWindowState.Maximized;
+            cuenta.MdiParent = this;
+            cuenta.Show();
+        }
+
+        private void planillaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPrincipalPlanilla cuenta = new frmPrincipalPlanilla();
+            cuenta.WindowState = FormWindowState.Maximized;
+            cuenta.MdiParent = this;
+            cuenta.Show();
+        }
     }
 }

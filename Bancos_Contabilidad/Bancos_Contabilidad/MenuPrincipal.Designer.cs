@@ -36,8 +36,10 @@
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.conciliacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.transaccionalesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.autorizacionesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.actividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estadoDeCuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadoDeResultadosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cierreContableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.autorizacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,8 +59,6 @@
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.autorizacionesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.estadoDeCuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,7 +102,7 @@
             // conciliacionToolStripMenuItem
             // 
             this.conciliacionToolStripMenuItem.Name = "conciliacionToolStripMenuItem";
-            this.conciliacionToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.conciliacionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.conciliacionToolStripMenuItem.Text = "Conciliacion";
             // 
             // transaccionalesToolStripMenuItem
@@ -114,10 +114,17 @@
             this.transaccionalesToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.transaccionalesToolStripMenuItem.Text = "Transaccionales";
             // 
+            // autorizacionesToolStripMenuItem1
+            // 
+            this.autorizacionesToolStripMenuItem1.Name = "autorizacionesToolStripMenuItem1";
+            this.autorizacionesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.autorizacionesToolStripMenuItem1.Text = "Autorizaciones";
+            this.autorizacionesToolStripMenuItem1.Click += new System.EventHandler(this.autorizacionesToolStripMenuItem1_Click);
+            // 
             // actividadesToolStripMenuItem
             // 
             this.actividadesToolStripMenuItem.Name = "actividadesToolStripMenuItem";
-            this.actividadesToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.actividadesToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.actividadesToolStripMenuItem.Text = "Cuentas";
             this.actividadesToolStripMenuItem.Click += new System.EventHandler(this.actividadesToolStripMenuItem_Click);
             // 
@@ -131,6 +138,13 @@
             this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
             this.procesosToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.procesosToolStripMenuItem.Text = "Bancos";
+            // 
+            // estadoDeCuentaToolStripMenuItem
+            // 
+            this.estadoDeCuentaToolStripMenuItem.Name = "estadoDeCuentaToolStripMenuItem";
+            this.estadoDeCuentaToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.estadoDeCuentaToolStripMenuItem.Text = "Estado de Cuenta";
+            this.estadoDeCuentaToolStripMenuItem.Click += new System.EventHandler(this.estadoDeCuentaToolStripMenuItem_Click);
             // 
             // estadoDeResultadosToolStripMenuItem1
             // 
@@ -186,6 +200,7 @@
             this.planillaToolStripMenuItem.Name = "planillaToolStripMenuItem";
             this.planillaToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.planillaToolStripMenuItem.Text = "Planilla";
+            this.planillaToolStripMenuItem.Click += new System.EventHandler(this.planillaToolStripMenuItem_Click);
             // 
             // alumnosToolStripMenuItem
             // 
@@ -217,6 +232,7 @@
             this.ventasToolStripMenuItem.Name = "ventasToolStripMenuItem";
             this.ventasToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.ventasToolStripMenuItem.Text = "Ventas";
+            this.ventasToolStripMenuItem.Click += new System.EventHandler(this.ventasToolStripMenuItem_Click);
             // 
             // cuotaToolStripMenuItem
             // 
@@ -227,6 +243,7 @@
             this.cuotaToolStripMenuItem.Name = "cuotaToolStripMenuItem";
             this.cuotaToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.cuotaToolStripMenuItem.Text = "Ingresos";
+            this.cuotaToolStripMenuItem.Click += new System.EventHandler(this.cuotaToolStripMenuItem_Click);
             // 
             // activosFijosToolStripMenuItem
             // 
@@ -281,20 +298,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(740, 24);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // autorizacionesToolStripMenuItem1
-            // 
-            this.autorizacionesToolStripMenuItem1.Name = "autorizacionesToolStripMenuItem1";
-            this.autorizacionesToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.autorizacionesToolStripMenuItem1.Text = "Autorizaciones";
-            this.autorizacionesToolStripMenuItem1.Click += new System.EventHandler(this.autorizacionesToolStripMenuItem1_Click);
-            // 
-            // estadoDeCuentaToolStripMenuItem
-            // 
-            this.estadoDeCuentaToolStripMenuItem.Name = "estadoDeCuentaToolStripMenuItem";
-            this.estadoDeCuentaToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
-            this.estadoDeCuentaToolStripMenuItem.Text = "Estado de Cuenta";
-            this.estadoDeCuentaToolStripMenuItem.Click += new System.EventHandler(this.estadoDeCuentaToolStripMenuItem_Click);
             // 
             // MenuPrincipal
             // 
