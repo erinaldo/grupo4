@@ -41,6 +41,8 @@
             this.btnRefrescar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.z = new System.Windows.Forms.Label();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Detalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdEmpresa)).BeginInit();
             this.grupoFiltrar.SuspendLayout();
             this.SuspendLayout();
@@ -49,17 +51,19 @@
             // 
             this.grdEmpresa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grdEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdEmpresa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Fecha,
+            this.Detalle});
             this.grdEmpresa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdEmpresa.Location = new System.Drawing.Point(0, 92);
             this.grdEmpresa.Name = "grdEmpresa";
             this.grdEmpresa.ReadOnly = true;
             this.grdEmpresa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdEmpresa.Size = new System.Drawing.Size(644, 194);
+            this.grdEmpresa.Size = new System.Drawing.Size(774, 236);
             this.grdEmpresa.TabIndex = 26;
             // 
             // grupoFiltrar
             // 
-            this.grupoFiltrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.grupoFiltrar.Controls.Add(this.txtBuscar);
             this.grupoFiltrar.Controls.Add(this.cmbBuscar);
             this.grupoFiltrar.Controls.Add(this.btnBuscar);
@@ -73,7 +77,7 @@
             this.grupoFiltrar.Dock = System.Windows.Forms.DockStyle.Top;
             this.grupoFiltrar.Location = new System.Drawing.Point(0, 0);
             this.grupoFiltrar.Name = "grupoFiltrar";
-            this.grupoFiltrar.Size = new System.Drawing.Size(644, 92);
+            this.grupoFiltrar.Size = new System.Drawing.Size(774, 92);
             this.grupoFiltrar.TabIndex = 25;
             this.grupoFiltrar.TabStop = false;
             this.grupoFiltrar.Text = "MENU";
@@ -168,17 +172,29 @@
             this.z.AutoSize = true;
             this.z.Dock = System.Windows.Forms.DockStyle.Right;
             this.z.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.z.Location = new System.Drawing.Point(464, 16);
+            this.z.Location = new System.Drawing.Point(594, 16);
             this.z.Name = "z";
             this.z.Size = new System.Drawing.Size(177, 39);
             this.z.TabIndex = 2;
             this.z.Text = "PLANILLA";
             // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            // 
+            // Detalle
+            // 
+            this.Detalle.HeaderText = "Detalle";
+            this.Detalle.Name = "Detalle";
+            this.Detalle.ReadOnly = true;
+            // 
             // frmPrincipalPlanilla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(644, 286);
+            this.ClientSize = new System.Drawing.Size(774, 328);
             this.Controls.Add(this.grdEmpresa);
             this.Controls.Add(this.grupoFiltrar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -205,5 +221,7 @@
         public System.Windows.Forms.Button btnRefrescar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Label z;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Detalle;
     }
 }

@@ -11,7 +11,9 @@ using System.Windows.Forms;
 namespace Bancos_Contabilidad
 {
     public partial class Login : Form
+
     {
+        
         public Login()
         {
             InitializeComponent();
@@ -22,6 +24,9 @@ namespace Bancos_Contabilidad
             MenuPrincipal mp = new MenuPrincipal();
             mp.Show();
             this.Hide();
+
+            CapaEntidad.idemp = "1";
+            
         }
     }
 }
