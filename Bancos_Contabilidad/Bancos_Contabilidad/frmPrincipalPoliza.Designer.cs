@@ -1,6 +1,6 @@
 ﻿namespace Bancos_Contabilidad
 {
-    partial class frmPrincipalActivoFijo
+    partial class frmPrincipalPoliza
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipalActivoFijo));
-            this.grdEmpresa = new System.Windows.Forms.DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipalPoliza));
+            this.grdPoliza = new System.Windows.Forms.DataGridView();
             this.grupoFiltrar = new System.Windows.Forms.GroupBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.cmbBuscar = new System.Windows.Forms.ComboBox();
@@ -41,21 +41,22 @@
             this.btnRefrescar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.z = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.grdEmpresa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdPoliza)).BeginInit();
             this.grupoFiltrar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // grdEmpresa
+            // grdPoliza
             // 
-            this.grdEmpresa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.grdEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdEmpresa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdEmpresa.Location = new System.Drawing.Point(0, 92);
-            this.grdEmpresa.Name = "grdEmpresa";
-            this.grdEmpresa.ReadOnly = true;
-            this.grdEmpresa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdEmpresa.Size = new System.Drawing.Size(689, 221);
-            this.grdEmpresa.TabIndex = 28;
+            this.grdPoliza.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grdPoliza.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdPoliza.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdPoliza.Location = new System.Drawing.Point(0, 92);
+            this.grdPoliza.Name = "grdPoliza";
+            this.grdPoliza.ReadOnly = true;
+            this.grdPoliza.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grdPoliza.Size = new System.Drawing.Size(689, 221);
+            this.grdPoliza.TabIndex = 28;
+            this.grdPoliza.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdEmpresa_CellDoubleClick);
             // 
             // grupoFiltrar
             // 
@@ -83,6 +84,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(200, 20);
             this.txtBuscar.TabIndex = 27;
+            this.txtBuscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyUp);
             // 
             // cmbBuscar
             // 
@@ -91,8 +93,10 @@
             this.cmbBuscar.Items.AddRange(new object[] {
             "Codigo",
             "Nombre",
-            "Direccion",
-            "Telefono"});
+            "Total",
+            "Cuenta",
+            "Fecha",
+            "Empresa"});
             this.cmbBuscar.Location = new System.Drawing.Point(6, 61);
             this.cmbBuscar.Name = "cmbBuscar";
             this.cmbBuscar.Size = new System.Drawing.Size(146, 21);
@@ -115,6 +119,7 @@
             this.btnIrUltimo.Size = new System.Drawing.Size(48, 42);
             this.btnIrUltimo.TabIndex = 22;
             this.btnIrUltimo.UseVisualStyleBackColor = true;
+            this.btnIrUltimo.Click += new System.EventHandler(this.btnIrUltimo_Click);
             // 
             // btnSiguiente
             // 
@@ -124,6 +129,7 @@
             this.btnSiguiente.Size = new System.Drawing.Size(48, 42);
             this.btnSiguiente.TabIndex = 21;
             this.btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
             // btnAnterior
             // 
@@ -133,6 +139,7 @@
             this.btnAnterior.Size = new System.Drawing.Size(48, 42);
             this.btnAnterior.TabIndex = 20;
             this.btnAnterior.UseVisualStyleBackColor = true;
+            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
             // btnIrPrimero
             // 
@@ -142,6 +149,7 @@
             this.btnIrPrimero.Size = new System.Drawing.Size(48, 42);
             this.btnIrPrimero.TabIndex = 19;
             this.btnIrPrimero.UseVisualStyleBackColor = true;
+            this.btnIrPrimero.Click += new System.EventHandler(this.btnIrPrimero_Click);
             // 
             // btnRefrescar
             // 
@@ -151,6 +159,7 @@
             this.btnRefrescar.Size = new System.Drawing.Size(48, 42);
             this.btnRefrescar.TabIndex = 18;
             this.btnRefrescar.UseVisualStyleBackColor = true;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
             // btnNuevo
             // 
@@ -167,23 +176,23 @@
             this.z.AutoSize = true;
             this.z.Dock = System.Windows.Forms.DockStyle.Right;
             this.z.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.z.Location = new System.Drawing.Point(411, 16);
+            this.z.Location = new System.Drawing.Point(547, 16);
             this.z.Name = "z";
-            this.z.Size = new System.Drawing.Size(275, 39);
+            this.z.Size = new System.Drawing.Size(139, 39);
             this.z.TabIndex = 2;
-            this.z.Text = "ACTIVOS FIJOS";
+            this.z.Text = "POLIZA";
             // 
-            // frmPrincipalActivoFijo
+            // frmPrincipalPoliza
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(689, 313);
-            this.Controls.Add(this.grdEmpresa);
+            this.Controls.Add(this.grdPoliza);
             this.Controls.Add(this.grupoFiltrar);
-            this.Name = "frmPrincipalActivoFijo";
+            this.Name = "frmPrincipalPoliza";
             this.Text = "ACTIVO FIJO";
-            ((System.ComponentModel.ISupportInitialize)(this.grdEmpresa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdPoliza)).EndInit();
             this.grupoFiltrar.ResumeLayout(false);
             this.grupoFiltrar.PerformLayout();
             this.ResumeLayout(false);
@@ -192,7 +201,7 @@
 
         #endregion
 
-        public System.Windows.Forms.DataGridView grdEmpresa;
+        public System.Windows.Forms.DataGridView grdPoliza;
         private System.Windows.Forms.GroupBox grupoFiltrar;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.ComboBox cmbBuscar;

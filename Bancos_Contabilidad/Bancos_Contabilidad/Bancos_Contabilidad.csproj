@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MRP_BD">
+      <HintPath>..\..\..\..\..\Desktop\DLL Conexion\MRP_BD.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,11 +49,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmActivosFijos.cs">
+    <Compile Include="CapaDatos.cs" />
+    <Compile Include="CapaEntidad.cs" />
+    <Compile Include="Conexion.cs" />
+    <Compile Include="frmPoliza.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmActivosFijos.Designer.cs">
-      <DependentUpon>frmActivosFijos.cs</DependentUpon>
+    <Compile Include="frmPoliza.Designer.cs">
+      <DependentUpon>frmPoliza.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAutorizacion.cs">
       <SubType>Form</SubType>
@@ -118,11 +124,11 @@
     <Compile Include="frmPlanilla.designer.cs">
       <DependentUpon>frmPlanilla.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPrincipalActivoFijo.cs">
+    <Compile Include="frmPrincipalPoliza.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPrincipalActivoFijo.Designer.cs">
-      <DependentUpon>frmPrincipalActivoFijo.cs</DependentUpon>
+    <Compile Include="frmPrincipalPoliza.Designer.cs">
+      <DependentUpon>frmPrincipalPoliza.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipalAutorizacion.cs">
       <SubType>Form</SubType>
@@ -214,10 +220,11 @@
     <Compile Include="frmPrincipalOrdenCompra.Designer.cs">
       <DependentUpon>frmPrincipalOrdenCompra.cs</DependentUpon>
     </Compile>
+    <Compile Include="CapaNegocio.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmActivosFijos.resx">
-      <DependentUpon>frmActivosFijos.cs</DependentUpon>
+    <EmbeddedResource Include="frmPoliza.resx">
+      <DependentUpon>frmPoliza.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAutorizacion.resx">
       <DependentUpon>frmAutorizacion.cs</DependentUpon>
@@ -270,8 +277,8 @@
     <EmbeddedResource Include="frmPrincipalEstadosFinancieros.resx">
       <DependentUpon>frmPrincipalEstadosFinancieros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPrincipalActivoFijo.resx">
-      <DependentUpon>frmPrincipalActivoFijo.cs</DependentUpon>
+    <EmbeddedResource Include="frmPrincipalPoliza.resx">
+      <DependentUpon>frmPrincipalPoliza.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipalPasivoFijo.resx">
       <DependentUpon>frmPrincipalPasivoFijo.cs</DependentUpon>

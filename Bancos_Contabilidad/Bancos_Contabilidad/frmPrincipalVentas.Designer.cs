@@ -41,6 +41,13 @@
             this.btnRefrescar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.z = new System.Windows.Forms.Label();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pagado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdEmpresa)).BeginInit();
             this.grupoFiltrar.SuspendLayout();
             this.SuspendLayout();
@@ -49,6 +56,14 @@
             // 
             this.grdEmpresa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grdEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdEmpresa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.Cliente,
+            this.Fecha,
+            this.Total,
+            this.Pagado,
+            this.Column1,
+            this.Estado});
             this.grdEmpresa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdEmpresa.Location = new System.Drawing.Point(0, 92);
             this.grdEmpresa.Name = "grdEmpresa";
@@ -59,7 +74,6 @@
             // 
             // grupoFiltrar
             // 
-            this.grupoFiltrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.grupoFiltrar.Controls.Add(this.txtBuscar);
             this.grupoFiltrar.Controls.Add(this.cmbBuscar);
             this.grupoFiltrar.Controls.Add(this.btnBuscar);
@@ -174,6 +188,48 @@
             this.z.TabIndex = 2;
             this.z.Text = "VENTAS";
             // 
+            // Id
+            // 
+            this.Id.HeaderText = "ID";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // Cliente
+            // 
+            this.Cliente.HeaderText = "Cliente";
+            this.Cliente.Name = "Cliente";
+            this.Cliente.ReadOnly = true;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            // 
+            // Pagado
+            // 
+            this.Pagado.HeaderText = "Pagado";
+            this.Pagado.Name = "Pagado";
+            this.Pagado.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Por pagar";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            // 
             // frmPrincipalVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -205,5 +261,12 @@
         public System.Windows.Forms.Button btnRefrescar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Label z;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Pagado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
     }
 }

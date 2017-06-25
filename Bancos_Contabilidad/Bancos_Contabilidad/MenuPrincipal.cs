@@ -44,7 +44,7 @@ namespace Bancos_Contabilidad
 
         private void activosFijosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPrincipalActivoFijo fpaf = new frmPrincipalActivoFijo();
+            frmPrincipalPoliza fpaf = new frmPrincipalPoliza();
             fpaf.WindowState = FormWindowState.Maximized;
             fpaf.MdiParent = this;
             fpaf.Show();
