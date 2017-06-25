@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Bancos_Contabilidad
 {
-    public partial class frmPrincipalActivoFijo : Form
+    public partial class frmPlanilla : Form
     {
-        public frmPrincipalActivoFijo()
+        public frmPlanilla()
         {
             InitializeComponent();
-        }
-
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            frmActivosFijos faf = new frmActivosFijos();
-            faf.Show();
         }
     }
 }

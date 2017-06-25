@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Bancos_Contabilidad
 {
-    public partial class frmActivosFijos : Form
+    public partial class frmEstadoDeCuenta : Form
     {
-        public frmActivosFijos()
+        public frmEstadoDeCuenta()
         {
             InitializeComponent();
         }

@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MRP_BD">
+      <HintPath>..\..\..\..\..\Desktop\DLL Conexion\MRP_BD.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,17 +49,56 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmActivosFijos.cs">
+    <Compile Include="CapaDatos.cs" />
+    <Compile Include="CapaEntidad.cs" />
+    <Compile Include="Conexion.cs" />
+    <Compile Include="frmPoliza.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmActivosFijos.Designer.cs">
-      <DependentUpon>frmActivosFijos.cs</DependentUpon>
+    <Compile Include="frmPoliza.Designer.cs">
+      <DependentUpon>frmPoliza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAutorizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAutorizacion.designer.cs">
+      <DependentUpon>frmAutorizacion.cs</DependentUpon>
     </Compile>
     <Compile Include="frmBalanceGeneral.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmBalanceGeneral.Designer.cs">
       <DependentUpon>frmBalanceGeneral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuenta.designer.cs">
+      <DependentUpon>frmCuenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCuentaPorCobrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuentaPorCobrar.designer.cs">
+      <DependentUpon>frmCuentaPorCobrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCuentaPorPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuentaPorPagar.designer.cs">
+      <DependentUpon>frmCuentaPorPagar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEstadoDeCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEstadoDeCuenta.designer.cs">
+      <DependentUpon>frmEstadoDeCuenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEstadoResultado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEstadoResultado.designer.cs">
+      <DependentUpon>frmEstadoResultado.cs</DependentUpon>
     </Compile>
     <Compile Include="frmEstadosFinancieros.cs">
       <SubType>Form</SubType>
@@ -76,11 +118,47 @@
     <Compile Include="frmPasivosFijos.Designer.cs">
       <DependentUpon>frmPasivosFijos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPrincipalActivoFijo.cs">
+    <Compile Include="frmPlanilla.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPrincipalActivoFijo.Designer.cs">
-      <DependentUpon>frmPrincipalActivoFijo.cs</DependentUpon>
+    <Compile Include="frmPlanilla.designer.cs">
+      <DependentUpon>frmPlanilla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipalPoliza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipalPoliza.Designer.cs">
+      <DependentUpon>frmPrincipalPoliza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipalAutorizacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipalAutorizacion.designer.cs">
+      <DependentUpon>frmPrincipalAutorizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipalCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipalCuenta.designer.cs">
+      <DependentUpon>frmPrincipalCuenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipalCuentaPorCobrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipalCuentaPorCobrar.designer.cs">
+      <DependentUpon>frmPrincipalCuentaPorCobrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipalCuentaPorPagar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipalCuentaPorPagar.designer.cs">
+      <DependentUpon>frmPrincipalCuentaPorPagar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipalEstadoDeCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipalEstadoDeCuenta.designer.cs">
+      <DependentUpon>frmPrincipalEstadoDeCuenta.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipalEstadosFinancieros.cs">
       <SubType>Form</SubType>
@@ -93,6 +171,36 @@
     </Compile>
     <Compile Include="frmPrincipalPasivoFijo.Designer.cs">
       <DependentUpon>frmPrincipalPasivoFijo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipalPlanilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipalPlanilla.designer.cs">
+      <DependentUpon>frmPrincipalPlanilla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipalTipoCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipalTipoCuenta.designer.cs">
+      <DependentUpon>frmPrincipalTipoCuenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipalVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipalVentas.designer.cs">
+      <DependentUpon>frmPrincipalVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTipoCuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTipoCuenta.designer.cs">
+      <DependentUpon>frmTipoCuenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentas.designer.cs">
+      <DependentUpon>frmVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -112,13 +220,32 @@
     <Compile Include="frmPrincipalOrdenCompra.Designer.cs">
       <DependentUpon>frmPrincipalOrdenCompra.cs</DependentUpon>
     </Compile>
+    <Compile Include="CapaNegocio.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmActivosFijos.resx">
-      <DependentUpon>frmActivosFijos.cs</DependentUpon>
+    <EmbeddedResource Include="frmPoliza.resx">
+      <DependentUpon>frmPoliza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAutorizacion.resx">
+      <DependentUpon>frmAutorizacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBalanceGeneral.resx">
       <DependentUpon>frmBalanceGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCuenta.resx">
+      <DependentUpon>frmCuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCuentaPorCobrar.resx">
+      <DependentUpon>frmCuentaPorCobrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCuentaPorPagar.resx">
+      <DependentUpon>frmCuentaPorPagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEstadoDeCuenta.resx">
+      <DependentUpon>frmEstadoDeCuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEstadoResultado.resx">
+      <DependentUpon>frmEstadoResultado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEstadosFinancieros.resx">
       <DependentUpon>frmEstadosFinancieros.cs</DependentUpon>
@@ -129,14 +256,47 @@
     <EmbeddedResource Include="frmPasivosFijos.resx">
       <DependentUpon>frmPasivosFijos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPlanilla.resx">
+      <DependentUpon>frmPlanilla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipalAutorizacion.resx">
+      <DependentUpon>frmPrincipalAutorizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipalCuenta.resx">
+      <DependentUpon>frmPrincipalCuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipalCuentaPorCobrar.resx">
+      <DependentUpon>frmPrincipalCuentaPorCobrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipalCuentaPorPagar.resx">
+      <DependentUpon>frmPrincipalCuentaPorPagar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipalEstadoDeCuenta.resx">
+      <DependentUpon>frmPrincipalEstadoDeCuenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipalEstadosFinancieros.resx">
       <DependentUpon>frmPrincipalEstadosFinancieros.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPrincipalActivoFijo.resx">
-      <DependentUpon>frmPrincipalActivoFijo.cs</DependentUpon>
+    <EmbeddedResource Include="frmPrincipalPoliza.resx">
+      <DependentUpon>frmPrincipalPoliza.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipalPasivoFijo.resx">
       <DependentUpon>frmPrincipalPasivoFijo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipalPlanilla.resx">
+      <DependentUpon>frmPrincipalPlanilla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipalTipoCuenta.resx">
+      <DependentUpon>frmPrincipalTipoCuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipalVentas.resx">
+      <DependentUpon>frmPrincipalVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTipoCuenta.resx">
+      <DependentUpon>frmTipoCuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVentas.resx">
+      <DependentUpon>frmVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

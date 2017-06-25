@@ -24,6 +24,11 @@ namespace Bancos_Contabilidad
                 frmBalanceGeneral fbg = new frmBalanceGeneral();
                 fbg.Show();
                 this.Hide();
+            }else
+            {
+                frmEstadoResultado fbg = new frmEstadoResultado();
+                fbg.Show();
+                this.Hide();
             }
         }
     }
