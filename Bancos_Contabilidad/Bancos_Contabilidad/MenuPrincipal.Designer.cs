@@ -57,6 +57,7 @@
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.ingresarAlSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -257,7 +258,8 @@
             // 
             this.inicioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cerrarSesiónToolStripMenuItem,
-            this.salirToolStripMenuItem1});
+            this.salirToolStripMenuItem1,
+            this.ingresarAlSistemaToolStripMenuItem});
             this.inicioToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("inicioToolStripMenuItem.Image")));
             this.inicioToolStripMenuItem.Name = "inicioToolStripMenuItem";
             this.inicioToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
@@ -277,6 +279,13 @@
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // ingresarAlSistemaToolStripMenuItem
+            // 
+            this.ingresarAlSistemaToolStripMenuItem.Name = "ingresarAlSistemaToolStripMenuItem";
+            this.ingresarAlSistemaToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.ingresarAlSistemaToolStripMenuItem.Text = "Ingresar al sistema";
+            this.ingresarAlSistemaToolStripMenuItem.Click += new System.EventHandler(this.ingresarAlSistemaToolStripMenuItem_Click);
+            // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,8 +294,10 @@
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.Name = "MenuPrincipal";
+            this.Tag = "frmLlamar";
             this.Text = "MENU";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Activated += new System.EventHandler(this.MenuPrincipal_Load);
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -325,6 +336,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem activosFijosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pasivosFijosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ingresarAlSistemaToolStripMenuItem;
     }
 }
 

@@ -40,3 +40,6 @@ C:\Users\Gomez\Documents\GitHub\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\o
 C:\Users\Gomez\Documents\GitHub\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmPrincipalOrdenCompra.resources
 C:\Users\Gomez\Documents\GitHub\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.Properties.Resources.resources
 C:\Users\Gomez\Documents\GitHub\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.csproj.GenerateResource.Cache
+C:\Users\Gomez\Documents\GitHub\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\bin\Debug\dllSeguridadSAD.dll
+C:\Users\Gomez\Documents\GitHub\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\bin\Debug\MRP_BD.dll
+C:\Users\Gomez\Documents\GitHub\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\bin\Debug\dllSeguridadSAD.pdb

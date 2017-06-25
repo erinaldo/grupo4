@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using dllSeguridadSAD;
 
 namespace Bancos_Contabilidad
 {
@@ -19,6 +20,9 @@ namespace Bancos_Contabilidad
 
         private void MenuPrincipal_Load(object sender, EventArgs e)
         {
+            catalogosToolStripMenuItem.Enabled = false;
+            procesosToolStripMenuItem.Enabled = false;
+            toolStripMenuItem2.Enabled = false;
 
         }
 
@@ -69,5 +73,13 @@ namespace Bancos_Contabilidad
             temp.MdiParent = this;
             temp.Show();
         }
+
+        private void ingresarAlSistemaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            dllSeguridadSAD.frmLogin ver = new dllSeguridadSAD.frmLogin();
+            ver.Show();
+            
+        }
+
     }
 }
