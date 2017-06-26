@@ -109,5 +109,56 @@ namespace Bancos_Contabilidad
             return i;
         }
 
+        public static int agregarCuentaContable(CapaEntidad.cuentacontable p)
+        {
+            int i = 0;
+            try
+            {
+                MRP_BD con = new MRP_BD("sa", "Cocodrilo13", "SAD2017", "DYLAN");
+                con.insertSQL("INSERT INTO CUENTACONTABLE VALUES('" + p.Nombre + "','" + p.Estadofinanciero + "','" + p.Clasificacion + "','" + p.Status + "')");
+                i = 1;
+            }
+            catch (Exception e)
+            {
+                i = 0;
+            }
+            return i;
+        }
+
+        public static int actualizarCuentaContable(CapaEntidad.cuentacontable p)
+        {
+            int i = 0;
+            try
+            {
+                MRP_BD con = new MRP_BD("sa", "Cocodrilo13", "SAD2017", "DYLAN");
+                con.updateSQL("update CUENTACONTABLE set nombre = '" + p.Nombre + "', estadofinanciero = '" + p.Estadofinanciero + "', clasificacion = '" + p.Clasificacion + "' where idcuentacontable = '" + p.ID1 + "'");
+
+                i = 1;
+            }
+            catch (Exception e)
+            {
+                i = 0;
+            }
+            return i;
+        }
+
+        public static int eliminarCuentaContable(CapaEntidad.cuentacontable p)
+        {
+            int i = 0;
+            try
+            {
+                MRP_BD con = new MRP_BD("sa", "Cocodrilo13", "SAD2017", "DYLAN");
+                con.updateSQL("update CUENTACONTABLE set stat = '0' where idcuentacontable = '" + p.ID1 + "'");
+
+                i = 1;
+            }
+            catch (Exception e)
+            {
+                i = 0;
+            }
+            return i;
+        }
+
+
     }
 }
