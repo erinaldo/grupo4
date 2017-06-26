@@ -41,13 +41,6 @@
             this.btnRefrescar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.z = new System.Windows.Forms.Label();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pagado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdEmpresa)).BeginInit();
             this.grupoFiltrar.SuspendLayout();
             this.SuspendLayout();
@@ -56,21 +49,13 @@
             // 
             this.grdEmpresa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.grdEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdEmpresa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.Cliente,
-            this.Fecha,
-            this.Total,
-            this.Pagado,
-            this.Column1,
-            this.Estado});
             this.grdEmpresa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grdEmpresa.Location = new System.Drawing.Point(0, 92);
             this.grdEmpresa.Name = "grdEmpresa";
             this.grdEmpresa.ReadOnly = true;
             this.grdEmpresa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdEmpresa.Size = new System.Drawing.Size(706, 230);
-            this.grdEmpresa.TabIndex = 32;
+            this.grdEmpresa.Size = new System.Drawing.Size(742, 226);
+            this.grdEmpresa.TabIndex = 30;
             // 
             // grupoFiltrar
             // 
@@ -87,8 +72,8 @@
             this.grupoFiltrar.Dock = System.Windows.Forms.DockStyle.Top;
             this.grupoFiltrar.Location = new System.Drawing.Point(0, 0);
             this.grupoFiltrar.Name = "grupoFiltrar";
-            this.grupoFiltrar.Size = new System.Drawing.Size(706, 92);
-            this.grupoFiltrar.TabIndex = 31;
+            this.grupoFiltrar.Size = new System.Drawing.Size(742, 92);
+            this.grupoFiltrar.TabIndex = 29;
             this.grupoFiltrar.TabStop = false;
             this.grupoFiltrar.Text = "MENU";
             // 
@@ -182,59 +167,17 @@
             this.z.AutoSize = true;
             this.z.Dock = System.Windows.Forms.DockStyle.Right;
             this.z.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.z.Location = new System.Drawing.Point(548, 16);
+            this.z.Location = new System.Drawing.Point(584, 16);
             this.z.Name = "z";
             this.z.Size = new System.Drawing.Size(155, 39);
             this.z.TabIndex = 2;
             this.z.Text = "VENTAS";
             // 
-            // Id
-            // 
-            this.Id.HeaderText = "ID";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
-            // Cliente
-            // 
-            this.Cliente.HeaderText = "Cliente";
-            this.Cliente.Name = "Cliente";
-            this.Cliente.ReadOnly = true;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            // 
-            // Pagado
-            // 
-            this.Pagado.HeaderText = "Pagado";
-            this.Pagado.Name = "Pagado";
-            this.Pagado.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Por pagar";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            // 
             // frmPrincipalVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(706, 322);
+            this.ClientSize = new System.Drawing.Size(742, 318);
             this.Controls.Add(this.grdEmpresa);
             this.Controls.Add(this.grupoFiltrar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -261,12 +204,5 @@
         public System.Windows.Forms.Button btnRefrescar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Label z;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pagado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
     }
 }

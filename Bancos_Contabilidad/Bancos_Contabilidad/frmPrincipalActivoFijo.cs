@@ -16,11 +16,5 @@ namespace Bancos_Contabilidad
         {
             InitializeComponent();
         }
-
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            frmActivosFijos faf = new frmActivosFijos();
-            faf.Show();
-        }
     }
 }

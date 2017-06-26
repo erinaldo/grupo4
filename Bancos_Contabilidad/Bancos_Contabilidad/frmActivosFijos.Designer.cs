@@ -199,7 +199,6 @@
             this.Controls.Add(this.grupoFiltrar);
             this.Controls.Add(this.txtActivo);
             this.Name = "frmActivosFijos";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ACTIVOS FIJOS";
             this.grupoFiltrar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

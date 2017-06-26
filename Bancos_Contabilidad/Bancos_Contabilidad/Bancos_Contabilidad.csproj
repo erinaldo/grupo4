@@ -12,21 +12,6 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <PublishUrl>publicar\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -48,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="dllSeguridadSAD">
-      <HintPath>..\..\..\..\..\Desktop\Seminario Analisis y Diseño\dllSeguridadSAD\dllSeguridadSAD\bin\Debug\dllSeguridadSAD.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -70,18 +52,6 @@
     <Compile Include="frmActivosFijos.Designer.cs">
       <DependentUpon>frmActivosFijos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmBalanceGeneral.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmBalanceGeneral.Designer.cs">
-      <DependentUpon>frmBalanceGeneral.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmEstadosFinancieros.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmEstadosFinancieros.Designer.cs">
-      <DependentUpon>frmEstadosFinancieros.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmOrdenCompra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,35 +64,23 @@
     <Compile Include="frmPasivosFijos.Designer.cs">
       <DependentUpon>frmPasivosFijos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPlanilla.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPlanilla.Designer.cs">
-      <DependentUpon>frmPlanilla.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmPrincipalActivoFijo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPrincipalActivoFijo.Designer.cs">
       <DependentUpon>frmPrincipalActivoFijo.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPrincipalEstadosFinancieros.cs">
+    <Compile Include="frmPrincipalInventarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPrincipalEstadosFinancieros.Designer.cs">
-      <DependentUpon>frmPrincipalEstadosFinancieros.cs</DependentUpon>
+    <Compile Include="frmPrincipalInventarios.Designer.cs">
+      <DependentUpon>frmPrincipalInventarios.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipalPasivoFijo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPrincipalPasivoFijo.Designer.cs">
       <DependentUpon>frmPrincipalPasivoFijo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmPrincipalPlanilla.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmPrincipalPlanilla.Designer.cs">
-      <DependentUpon>frmPrincipalPlanilla.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipalVentas.cs">
       <SubType>Form</SubType>
@@ -148,22 +106,16 @@
     <Compile Include="MenuPrincipal.Designer.cs">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPrincipalOrdenCompra.cs">
+    <Compile Include="PrincipalOrdenCompra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPrincipalOrdenCompra.Designer.cs">
-      <DependentUpon>frmPrincipalOrdenCompra.cs</DependentUpon>
+    <Compile Include="PrincipalOrdenCompra.Designer.cs">
+      <DependentUpon>PrincipalOrdenCompra.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmActivosFijos.resx">
       <DependentUpon>frmActivosFijos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmBalanceGeneral.resx">
-      <DependentUpon>frmBalanceGeneral.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmEstadosFinancieros.resx">
-      <DependentUpon>frmEstadosFinancieros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmOrdenCompra.resx">
       <DependentUpon>frmOrdenCompra.cs</DependentUpon>
@@ -171,20 +123,14 @@
     <EmbeddedResource Include="frmPasivosFijos.resx">
       <DependentUpon>frmPasivosFijos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPlanilla.resx">
-      <DependentUpon>frmPlanilla.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmPrincipalEstadosFinancieros.resx">
-      <DependentUpon>frmPrincipalEstadosFinancieros.cs</DependentUpon>
+    <EmbeddedResource Include="frmPrincipalInventarios.resx">
+      <DependentUpon>frmPrincipalInventarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipalActivoFijo.resx">
       <DependentUpon>frmPrincipalActivoFijo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipalPasivoFijo.resx">
       <DependentUpon>frmPrincipalPasivoFijo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmPrincipalPlanilla.resx">
-      <DependentUpon>frmPrincipalPlanilla.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipalVentas.resx">
       <DependentUpon>frmPrincipalVentas.cs</DependentUpon>
@@ -198,8 +144,8 @@
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPrincipalOrdenCompra.resx">
-      <DependentUpon>frmPrincipalOrdenCompra.cs</DependentUpon>
+    <EmbeddedResource Include="PrincipalOrdenCompra.resx">
+      <DependentUpon>PrincipalOrdenCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -222,18 +168,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
-      <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 y x64%29</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
