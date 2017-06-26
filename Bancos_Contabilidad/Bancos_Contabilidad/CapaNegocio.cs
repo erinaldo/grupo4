@@ -74,5 +74,69 @@ namespace Bancos_Contabilidad
             }
         }
 
+        public void insertarDocRef(CapaEntidad.DocumentoRef p)
+        {
+            if (string.IsNullOrWhiteSpace(p.Descripcion1) || string.IsNullOrWhiteSpace(p.Documento1) || string.IsNullOrWhiteSpace(p.Total))
+            {
+                MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                int resultado = CapaDatos.agregarDocRef(p);
+
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Documento Guardado Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo guardar el Documento", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+        }
+        public void actualizarDocRef(CapaEntidad.DocumentoRef p)
+        {
+            if (string.IsNullOrWhiteSpace(p.Documento1) || string.IsNullOrWhiteSpace(p.Descripcion1) || string.IsNullOrWhiteSpace(p.Total))
+            {
+                MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                int resultado = CapaDatos.actualizarDocRef(p);
+
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Documento Editado Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo editar el Documento", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
+            }
+        }
+
+        public void eliminarDocRef(CapaEntidad.DocumentoRef p)
+        {
+            if (string.IsNullOrWhiteSpace(p.ID1))
+            {
+                MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                int resultado = CapaDatos.eliminarDocRef(p);
+
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Documento Eliminado Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo eliminar el Documento", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
+            }
+        }
+
     }
 }

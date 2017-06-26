@@ -40,6 +40,7 @@
             this.actividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadoDeCuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.documentoRefToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ordenDeCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuentasPorPagarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.planillaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,8 +61,8 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -137,7 +138,8 @@
             this.procesosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.actividadesToolStripMenuItem,
             this.transaccionalesToolStripMenuItem,
-            this.estadoDeCuentaToolStripMenuItem});
+            this.estadoDeCuentaToolStripMenuItem,
+            this.documentoRefToolStripMenuItem});
             this.procesosToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("procesosToolStripMenuItem.Image")));
             this.procesosToolStripMenuItem.Name = "procesosToolStripMenuItem";
             this.procesosToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
@@ -149,6 +151,13 @@
             this.estadoDeCuentaToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
             this.estadoDeCuentaToolStripMenuItem.Text = "Estado de Cuenta";
             this.estadoDeCuentaToolStripMenuItem.Click += new System.EventHandler(this.estadoDeCuentaToolStripMenuItem_Click);
+            // 
+            // documentoRefToolStripMenuItem
+            // 
+            this.documentoRefToolStripMenuItem.Name = "documentoRefToolStripMenuItem";
+            this.documentoRefToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.documentoRefToolStripMenuItem.Text = "Documento Ref";
+            this.documentoRefToolStripMenuItem.Click += new System.EventHandler(this.documentoRefToolStripMenuItem_Click);
             // 
             // ordenDeCompraToolStripMenuItem
             // 
@@ -320,19 +329,19 @@
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(79, 17);
             this.toolStripStatusLabel2.Text = "Modulo: FRM";
             // 
-            // toolStripStatusLabel3
-            // 
-            this.toolStripStatusLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(38, 17);
-            this.toolStripStatusLabel3.Text = "Fecha";
-            // 
             // toolStripStatusLabel4
             // 
             this.toolStripStatusLabel4.BackColor = System.Drawing.Color.Transparent;
             this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
             this.toolStripStatusLabel4.Size = new System.Drawing.Size(89, 17);
             this.toolStripStatusLabel4.Text = "Usuario: Admin";
+            // 
+            // toolStripStatusLabel3
+            // 
+            this.toolStripStatusLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(38, 17);
+            this.toolStripStatusLabel3.Text = "Fecha";
             // 
             // MenuPrincipal
             // 
@@ -349,6 +358,7 @@
             this.Name = "MenuPrincipal";
             this.Text = "MENU";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MenuPrincipal_FormClosed);
             this.Load += new System.EventHandler(this.MenuPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -394,6 +404,7 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
+        private System.Windows.Forms.ToolStripMenuItem documentoRefToolStripMenuItem;
     }
 }
 

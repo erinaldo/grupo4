@@ -57,5 +57,57 @@ namespace Bancos_Contabilidad
             }
             return i;
         }
+
+        public static int agregarDocRef(CapaEntidad.DocumentoRef p)
+        {
+            int i = 0;
+            try
+            {
+                MRP_BD con = new MRP_BD("sa", "Cocodrilo13", "SAD2017", "DIEGO-HP");
+                con.insertSQL("INSERT INTO DOCUMENTOREF VALUES('" + p.Documento1 + "','" + p.Descripcion1 + "',GETDATE(),'" + p.Estado + "','" + p.Total + "')");
+
+                i = 1;
+            }
+            catch (Exception e)
+            {
+                i = 0;
+            }
+            return i;
+        }
+
+        public static int actualizarDocRef(CapaEntidad.DocumentoRef p)
+        {
+            int i = 0;
+            try
+            {
+                MRP_BD con = new MRP_BD("sa", "Cocodrilo13", "SAD2017", "DIEGO-HP");
+                con.updateSQL("update documentoref set serieDocumento = '" + p.Documento1 + "', descripcon = '" + p.Descripcion1 + "', fecha = getdate(), stat = '" + p.Estado + "', MONTO = '" + p.Total + "' where idDocumento = '" + p.ID1 + "'");
+
+                i = 1;
+            }
+            catch (Exception e)
+            {
+                i = 0;
+            }
+            return i;
+        }
+
+        public static int eliminarDocRef(CapaEntidad.DocumentoRef p)
+        {
+            int i = 0;
+            try
+            {
+                MRP_BD con = new MRP_BD("sa", "Cocodrilo13", "SAD2017", "DIEGO-HP");
+                con.updateSQL("update documentoref set stat = '0' where idDocumento = '" + p.ID1 + "'");
+
+                i = 1;
+            }
+            catch (Exception e)
+            {
+                i = 0;
+            }
+            return i;
+        }
+
     }
 }
