@@ -111,6 +111,92 @@ namespace Bancos_Contabilidad
             }
         }
 
+        public class DocumentoRef{
+            string ID;
+            string Documento;
+            string Descripcion;
+            string total;
+            string fecha;
+            string estado;
+
+            public string ID1
+            {
+                get
+                {
+                    return ID;
+                }
+
+                set
+                {
+                    ID = value;
+                }
+            }
+
+            public string Documento1
+            {
+                get
+                {
+                    return Documento;
+                }
+
+                set
+                {
+                    Documento = value;
+                }
+            }
+
+            public string Descripcion1
+            {
+                get
+                {
+                    return Descripcion;
+                }
+
+                set
+                {
+                    Descripcion = value;
+                }
+            }
+
+            public string Total
+            {
+                get
+                {
+                    return total;
+                }
+
+                set
+                {
+                    total = value;
+                }
+            }
+
+            public string Fecha
+            {
+                get
+                {
+                    return fecha;
+                }
+
+                set
+                {
+                    fecha = value;
+                }
+            }
+
+            public string Estado
+            {
+                get
+                {
+                    return estado;
+                }
+
+                set
+                {
+                    estado = value;
+                }
+            }
+        }
         public class cuentacontable
         {
             string ID;
@@ -184,6 +270,7 @@ namespace Bancos_Contabilidad
                 }
             }
         }
+
 
     }
 }

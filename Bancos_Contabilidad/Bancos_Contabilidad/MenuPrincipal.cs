@@ -149,5 +149,18 @@ namespace Bancos_Contabilidad
         {
 
         }
+
+        private void documentoRefToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPrincipalDocRef cuenta = new frmPrincipalDocRef();
+            cuenta.WindowState = FormWindowState.Maximized;
+            cuenta.MdiParent = this;
+            cuenta.Show();
+        }
+
+        private void MenuPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
+        }
     }
 }
