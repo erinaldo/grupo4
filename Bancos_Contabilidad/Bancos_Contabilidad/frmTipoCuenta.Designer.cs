@@ -38,11 +38,11 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.txtNoOrden = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbEstadoFinanciero = new System.Windows.Forms.ComboBox();
+            this.cmbClasificacion = new System.Windows.Forms.ComboBox();
             this.grupoFiltrar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -99,6 +99,7 @@
             this.btnCancelar.Size = new System.Drawing.Size(48, 42);
             this.btnCancelar.TabIndex = 9;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -109,6 +110,7 @@
             this.btnGuardar.Size = new System.Drawing.Size(48, 42);
             this.btnGuardar.TabIndex = 8;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnEliminar
             // 
@@ -118,6 +120,7 @@
             this.btnEliminar.Size = new System.Drawing.Size(48, 42);
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
@@ -127,6 +130,7 @@
             this.btnEditar.Size = new System.Drawing.Size(48, 42);
             this.btnEditar.TabIndex = 6;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnNuevo
             // 
@@ -136,16 +140,17 @@
             this.btnNuevo.Size = new System.Drawing.Size(48, 42);
             this.btnNuevo.TabIndex = 5;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // txtNoOrden
+            // txtNombre
             // 
-            this.txtNoOrden.Enabled = false;
-            this.txtNoOrden.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNoOrden.Location = new System.Drawing.Point(145, 78);
-            this.txtNoOrden.Name = "txtNoOrden";
-            this.txtNoOrden.Size = new System.Drawing.Size(247, 25);
-            this.txtNoOrden.TabIndex = 141;
-            this.txtNoOrden.Tag = "nombre";
+            this.txtNombre.Enabled = false;
+            this.txtNombre.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(145, 78);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(247, 25);
+            this.txtNombre.TabIndex = 141;
+            this.txtNombre.Tag = "nombre";
             // 
             // label4
             // 
@@ -167,31 +172,37 @@
             this.label2.TabIndex = 146;
             this.label2.Text = "Estado Financiero:";
             // 
-            // comboBox1
+            // cmbEstadoFinanciero
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbEstadoFinanciero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEstadoFinanciero.Enabled = false;
+            this.cmbEstadoFinanciero.FormattingEnabled = true;
+            this.cmbEstadoFinanciero.Items.AddRange(new object[] {
             "Estado de Resultados",
             "Balance General"});
-            this.comboBox1.Location = new System.Drawing.Point(145, 119);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(246, 21);
-            this.comboBox1.TabIndex = 147;
+            this.cmbEstadoFinanciero.Location = new System.Drawing.Point(145, 119);
+            this.cmbEstadoFinanciero.Name = "cmbEstadoFinanciero";
+            this.cmbEstadoFinanciero.Size = new System.Drawing.Size(246, 21);
+            this.cmbEstadoFinanciero.TabIndex = 147;
             // 
-            // comboBox2
+            // cmbClasificacion
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cmbClasificacion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbClasificacion.Enabled = false;
+            this.cmbClasificacion.FormattingEnabled = true;
+            this.cmbClasificacion.Items.AddRange(new object[] {
             "Activo corriente",
             "Activo no corriente",
             "Pasivo corriente",
             "Pasivo no corriente",
-            "Utilidad bruta",
-            "Utilidad neta"});
-            this.comboBox2.Location = new System.Drawing.Point(145, 164);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(246, 21);
-            this.comboBox2.TabIndex = 148;
+            "Activo Fijo",
+            "Utilidad Bruta",
+            "Utilidad Operativa ",
+            "Utilidad Neta"});
+            this.cmbClasificacion.Location = new System.Drawing.Point(145, 164);
+            this.cmbClasificacion.Name = "cmbClasificacion";
+            this.cmbClasificacion.Size = new System.Drawing.Size(246, 21);
+            this.cmbClasificacion.TabIndex = 148;
             // 
             // frmTipoCuenta
             // 
@@ -199,13 +210,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(420, 206);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbClasificacion);
+            this.Controls.Add(this.cmbEstadoFinanciero);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.grupoFiltrar);
-            this.Controls.Add(this.txtNoOrden);
+            this.Controls.Add(this.txtNombre);
             this.Name = "frmTipoCuenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTipoCuenta";
@@ -226,10 +237,10 @@
         public System.Windows.Forms.Button btnEliminar;
         public System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnNuevo;
-        public System.Windows.Forms.TextBox txtNoOrden;
+        public System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbEstadoFinanciero;
+        private System.Windows.Forms.ComboBox cmbClasificacion;
     }
 }

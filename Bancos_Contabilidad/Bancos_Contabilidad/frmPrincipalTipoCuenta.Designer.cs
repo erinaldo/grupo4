@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipalTipoCuenta));
-            this.grdEmpresa = new System.Windows.Forms.DataGridView();
+            this.grdCuentaContable = new System.Windows.Forms.DataGridView();
             this.grupoFiltrar = new System.Windows.Forms.GroupBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.cmbBuscar = new System.Windows.Forms.ComboBox();
@@ -41,21 +41,22 @@
             this.btnRefrescar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.z = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.grdEmpresa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdCuentaContable)).BeginInit();
             this.grupoFiltrar.SuspendLayout();
             this.SuspendLayout();
             // 
-            // grdEmpresa
+            // grdCuentaContable
             // 
-            this.grdEmpresa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.grdEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdEmpresa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdEmpresa.Location = new System.Drawing.Point(0, 92);
-            this.grdEmpresa.Name = "grdEmpresa";
-            this.grdEmpresa.ReadOnly = true;
-            this.grdEmpresa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdEmpresa.Size = new System.Drawing.Size(897, 292);
-            this.grdEmpresa.TabIndex = 26;
+            this.grdCuentaContable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grdCuentaContable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdCuentaContable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdCuentaContable.Location = new System.Drawing.Point(0, 92);
+            this.grdCuentaContable.Name = "grdCuentaContable";
+            this.grdCuentaContable.ReadOnly = true;
+            this.grdCuentaContable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grdCuentaContable.Size = new System.Drawing.Size(897, 292);
+            this.grdCuentaContable.TabIndex = 26;
+            this.grdCuentaContable.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdCuentaContable_CellDoubleClick);
             // 
             // grupoFiltrar
             // 
@@ -84,6 +85,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(200, 20);
             this.txtBuscar.TabIndex = 27;
+            this.txtBuscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyUp);
             // 
             // cmbBuscar
             // 
@@ -92,8 +94,8 @@
             this.cmbBuscar.Items.AddRange(new object[] {
             "Codigo",
             "Nombre",
-            "Direccion",
-            "Telefono"});
+            "Estado Financiero",
+            "Clasificacion"});
             this.cmbBuscar.Location = new System.Drawing.Point(6, 61);
             this.cmbBuscar.Name = "cmbBuscar";
             this.cmbBuscar.Size = new System.Drawing.Size(146, 21);
@@ -116,6 +118,7 @@
             this.btnIrUltimo.Size = new System.Drawing.Size(48, 42);
             this.btnIrUltimo.TabIndex = 22;
             this.btnIrUltimo.UseVisualStyleBackColor = true;
+            this.btnIrUltimo.Click += new System.EventHandler(this.btnIrUltimo_Click);
             // 
             // btnSiguiente
             // 
@@ -125,6 +128,7 @@
             this.btnSiguiente.Size = new System.Drawing.Size(48, 42);
             this.btnSiguiente.TabIndex = 21;
             this.btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
             // btnAnterior
             // 
@@ -134,6 +138,7 @@
             this.btnAnterior.Size = new System.Drawing.Size(48, 42);
             this.btnAnterior.TabIndex = 20;
             this.btnAnterior.UseVisualStyleBackColor = true;
+            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
             // btnIrPrimero
             // 
@@ -143,6 +148,7 @@
             this.btnIrPrimero.Size = new System.Drawing.Size(48, 42);
             this.btnIrPrimero.TabIndex = 19;
             this.btnIrPrimero.UseVisualStyleBackColor = true;
+            this.btnIrPrimero.Click += new System.EventHandler(this.btnIrPrimero_Click);
             // 
             // btnRefrescar
             // 
@@ -152,6 +158,7 @@
             this.btnRefrescar.Size = new System.Drawing.Size(48, 42);
             this.btnRefrescar.TabIndex = 18;
             this.btnRefrescar.UseVisualStyleBackColor = true;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
             // btnNuevo
             // 
@@ -179,12 +186,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(897, 384);
-            this.Controls.Add(this.grdEmpresa);
+            this.Controls.Add(this.grdCuentaContable);
             this.Controls.Add(this.grupoFiltrar);
             this.Name = "frmPrincipalTipoCuenta";
             this.Text = "frmPrincipalTipoCuenta";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.grdEmpresa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdCuentaContable)).EndInit();
             this.grupoFiltrar.ResumeLayout(false);
             this.grupoFiltrar.PerformLayout();
             this.ResumeLayout(false);
@@ -193,7 +200,7 @@
 
         #endregion
 
-        public System.Windows.Forms.DataGridView grdEmpresa;
+        public System.Windows.Forms.DataGridView grdCuentaContable;
         private System.Windows.Forms.GroupBox grupoFiltrar;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.ComboBox cmbBuscar;

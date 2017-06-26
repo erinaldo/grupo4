@@ -111,5 +111,79 @@ namespace Bancos_Contabilidad
             }
         }
 
+        public class cuentacontable
+        {
+            string ID;
+            string nombre;
+            string estadofinanciero;
+            string clasificacion;
+            string status;
+
+            public string ID1
+            {
+                get
+                {
+                    return ID;
+                }
+
+                set
+                {
+                    ID = value;
+                }
+            }
+
+            public string Nombre
+            {
+                get
+                {
+                    return nombre;
+                }
+
+                set
+                {
+                    nombre = value;
+                }
+            }
+
+            public string Estadofinanciero
+            {
+                get
+                {
+                    return estadofinanciero;
+                }
+
+                set
+                {
+                    estadofinanciero = value;
+                }
+            }
+
+            public string Clasificacion
+            {
+                get
+                {
+                    return clasificacion;
+                }
+
+                set
+                {
+                    clasificacion = value;
+                }
+            }
+
+            public string Status
+            {
+                get
+                {
+                    return status;
+                }
+
+                set
+                {
+                    status = value;
+                }
+            }
+        }
+
     }
 }
