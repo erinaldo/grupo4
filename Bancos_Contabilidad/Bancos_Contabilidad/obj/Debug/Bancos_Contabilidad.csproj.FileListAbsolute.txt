@@ -71,3 +71,6 @@ C:\Users\DylanIsaac\Source\Repos\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\
 C:\Users\DylanIsaac\Source\Repos\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmPrincipalOrdenCompra.resources
 C:\Users\DylanIsaac\Source\Repos\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.Properties.Resources.resources
 C:\Users\DylanIsaac\Source\Repos\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.csproj.GenerateResource.Cache
+C:\Users\Diego\Source\Repos\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\bin\Debug\Bancos_Contabilidad.exe.config
+C:\Users\Diego\Source\Repos\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.exe
+C:\Users\Diego\Source\Repos\Grupo4\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.pdb
