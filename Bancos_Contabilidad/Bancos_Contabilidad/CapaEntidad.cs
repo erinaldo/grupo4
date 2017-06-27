@@ -10,6 +10,8 @@ namespace Bancos_Contabilidad
     {
 
         public static string idemp;
+        public static MRP_BD con = new MRP_BD("sa", "Cocodrilo13", "SAD2017", "JREVMENPC");
+
         public class poliza{
             string ID;
             string nombre;
@@ -110,7 +112,92 @@ namespace Bancos_Contabilidad
                 }
             }
         }
+        public class DocumentoRef{
+            string ID;
+            string Documento;
+            string Descripcion;
+            string total;
+            string fecha;
+            string estado;
 
+            public string ID1
+            {
+                get
+                {
+                    return ID;
+                }
+
+                set
+                {
+                    ID = value;
+                }
+            }
+
+            public string Documento1
+            {
+                get
+                {
+                    return Documento;
+                }
+
+                set
+                {
+                    Documento = value;
+                }
+            }
+
+            public string Descripcion1
+            {
+                get
+                {
+                    return Descripcion;
+                }
+
+                set
+                {
+                    Descripcion = value;
+                }
+            }
+
+            public string Total
+            {
+                get
+                {
+                    return total;
+                }
+
+                set
+                {
+                    total = value;
+                }
+            }
+
+            public string Fecha
+            {
+                get
+                {
+                    return fecha;
+                }
+
+                set
+                {
+                    fecha = value;
+                }
+            }
+
+            public string Estado
+            {
+                get
+                {
+                    return estado;
+                }
+
+                set
+                {
+                    estado = value;
+                }
+            }
+        }
         public class cuentacontable
         {
             string ID;
@@ -184,6 +271,121 @@ namespace Bancos_Contabilidad
                 }
             }
         }
+        public class cuentaBancos
+        {
+            string ID_CUENTA;
+            string saldo;
+            string nombre_cuenta;
+            string numero_cuenta;
+            string banco;
+            string activo;
+            string estado;
+            string ID_EMP;
+            
+            public string ID_CUENTA1
+            {
+                get
+                {
+                    return ID_CUENTA;
+                }
 
+                set
+                {
+                    ID_CUENTA = value;
+                }
+            }
+
+            public string Nombre_cuenta
+            {
+                get
+                {
+                    return nombre_cuenta;
+                }
+
+                set
+                {
+                    nombre_cuenta = value;
+                }
+            }
+
+            public string Numero_cuenta
+            {
+                get
+                {
+                    return numero_cuenta;
+                }
+
+                set
+                {
+                    numero_cuenta = value;
+                }
+            }
+
+            public string Banco
+            {
+                get
+                {
+                    return banco;
+                }
+
+                set
+                {
+                    banco = value;
+                }
+            }
+
+            public string Activo
+            {
+                get
+                {
+                    return activo;
+                }
+
+                set
+                {
+                    activo = value;
+                }
+            }
+
+            public string Estado
+            {
+                get
+                {
+                    return estado;
+                }
+
+                set
+                {
+                    estado = value;
+                }
+            }
+
+            public string ID_EMP1
+            {
+                get
+                {
+                    return ID_EMP;
+                }
+
+                set
+                {
+                    ID_EMP = value;
+                }
+            }
+
+            public string Saldo
+            {
+                get
+                {
+                    return saldo;
+                }
+
+                set
+                {
+                    saldo = value;
+                }
+            }
+        }
     }
+
 }

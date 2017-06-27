@@ -9,6 +9,8 @@ namespace Bancos_Contabilidad
 {
     class CapaNegocio
     {
+
+        #region Poliza
         public void insertPoliza(CapaEntidad.poliza p)
         {
             if (string.IsNullOrWhiteSpace(p.Nombre) || string.IsNullOrWhiteSpace(p.Total) || string.IsNullOrWhiteSpace(p.Cuenta))
@@ -29,7 +31,6 @@ namespace Bancos_Contabilidad
                 }
             }
         }
-
         public void actualizarPoliza(CapaEntidad.poliza p)
         {
             if (string.IsNullOrWhiteSpace(p.Nombre) || string.IsNullOrWhiteSpace(p.Total) || string.IsNullOrWhiteSpace(p.Cuenta))
@@ -51,7 +52,6 @@ namespace Bancos_Contabilidad
 
             }
         }
-
         public void eliminarPoliza(CapaEntidad.poliza p)
         {
             if (string.IsNullOrWhiteSpace(p.ID1))
@@ -73,7 +73,74 @@ namespace Bancos_Contabilidad
 
             }
         }
+        #endregion
 
+        #region Documento Referencia
+        public void insertarDocRef(CapaEntidad.DocumentoRef p)
+        {
+            if (string.IsNullOrWhiteSpace(p.Descripcion1) || string.IsNullOrWhiteSpace(p.Documento1) || string.IsNullOrWhiteSpace(p.Total))
+            {
+                MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                int resultado = CapaDatos.agregarDocRef(p);
+
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Documento Guardado Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo guardar el Documento", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+        }
+        public void actualizarDocRef(CapaEntidad.DocumentoRef p)
+        {
+            if (string.IsNullOrWhiteSpace(p.Documento1) || string.IsNullOrWhiteSpace(p.Descripcion1) || string.IsNullOrWhiteSpace(p.Total))
+            {
+                MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                int resultado = CapaDatos.actualizarDocRef(p);
+
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Documento Editado Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo editar el Documento", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
+            }
+        }
+        public void eliminarDocRef(CapaEntidad.DocumentoRef p)
+        {
+            if (string.IsNullOrWhiteSpace(p.ID1))
+            {
+                MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                int resultado = CapaDatos.eliminarDocRef(p);
+
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Documento Eliminado Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo eliminar el Documento", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
+            }
+        }
+        #endregion
+
+        #region Cuenta Contable
         public void insertCuentaContable(CapaEntidad.cuentacontable p)
         {
             if (string.IsNullOrWhiteSpace(p.Nombre) || string.IsNullOrWhiteSpace(p.Estadofinanciero) || string.IsNullOrWhiteSpace(p.Clasificacion))
@@ -94,7 +161,6 @@ namespace Bancos_Contabilidad
                 }
             }
         }
-
         public void actualizarCuentaContable(CapaEntidad.cuentacontable p)
         {
             if (string.IsNullOrWhiteSpace(p.Nombre) || string.IsNullOrWhiteSpace(p.Estadofinanciero) || string.IsNullOrWhiteSpace(p.Clasificacion))
@@ -116,7 +182,6 @@ namespace Bancos_Contabilidad
 
             }
         }
-
         public void eliminarCuentaContable(CapaEntidad.cuentacontable p)
         {
             if (string.IsNullOrWhiteSpace(p.ID1))
@@ -138,7 +203,73 @@ namespace Bancos_Contabilidad
 
             }
         }
+        #endregion
 
+        #region Cuenta Bancaria
+        public void insertCuenta(CapaEntidad.cuentaBancos p)
+        {
+            if (string.IsNullOrWhiteSpace(p.Nombre_cuenta) || string.IsNullOrWhiteSpace(p.Nombre_cuenta) || string.IsNullOrWhiteSpace(p.Saldo) || string.IsNullOrWhiteSpace(p.Banco))
+            {
+                MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                int resultado = CapaDatos.agregarCuenta(p);
+
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Cuenta guardada con exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo guardar cuenta", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+        }
+        public void actualizarCuenta(CapaEntidad.cuentaBancos p)
+        {
+            if (string.IsNullOrWhiteSpace(p.Nombre_cuenta) || string.IsNullOrWhiteSpace(p.Numero_cuenta) || string.IsNullOrWhiteSpace(p.Saldo))
+            {
+                MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                int resultado = CapaDatos.actualizarCuenta(p);
+
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Cuenta Editada Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo editar la cuenta", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
+            }
+        }
+        public void eliminarCuenta(CapaEntidad.cuentaBancos p)
+        {
+            if (string.IsNullOrWhiteSpace(p.ID_CUENTA1))
+            {
+                MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                int resultado = CapaDatos.eliminarCuenta(p);
+
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Poliza Eliminada Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo eliminar la Poliza", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
+            }
+        }
+        #endregion
 
     }
 }
+

@@ -12,7 +12,7 @@ namespace Bancos_Contabilidad
 {
     public partial class frmPrincipalTipoCuenta : Form
     {
-        MRP_BD con = new MRP_BD("sa", "Cocodrilo13", "SAD2017", "DYLAN");
+        //MRP_BD con = new MRP_BD("sa", "Cocodrilo13", "SAD2017", "JREVMENPC");
 
         public frmPrincipalTipoCuenta()
         {
@@ -22,7 +22,7 @@ namespace Bancos_Contabilidad
 
         public void ActualizarGrid()
         {
-            grdCuentaContable.DataSource = con.getSQL("SELECT rtrim(idcuentacontable) as ID, rtrim(nombre) as Nombre, rtrim(estadofinanciero) as [Estado Financiero], rtrim(clasificacion) as Clasificacion FROM CUENTACONTABLE where stat <> '0'");
+            grdCuentaContable.DataSource = CapaEntidad.con.getSQL("SELECT rtrim(idcuentacontable) as ID, rtrim(nombre) as Nombre, rtrim(estadofinanciero) as [Estado Financiero], rtrim(clasificacion) as Clasificacion FROM CUENTACONTABLE where stat <> '0'");
         }
 
 
@@ -89,19 +89,19 @@ namespace Bancos_Contabilidad
         {
             if (cmbBuscar.Text == "Nombre")
             {
-                grdCuentaContable.DataSource = con.getSQL("SELECT rtrim(idcuentacontable) as ID, rtrim(nombre) as Nombre, rtrim(estadofinanciero) as [Estado Financiero], rtrim(clasificacion) as Clasificacion FROM CUENTACONTABLE where stat <> '0' AND nombre LIKE '" + txtBuscar.Text + "%'");
+                grdCuentaContable.DataSource = CapaEntidad.con.getSQL("SELECT rtrim(idcuentacontable) as ID, rtrim(nombre) as Nombre, rtrim(estadofinanciero) as [Estado Financiero], rtrim(clasificacion) as Clasificacion FROM CUENTACONTABLE where stat <> '0' AND nombre LIKE '" + txtBuscar.Text + "%'");
             }
             else if (cmbBuscar.Text == "Codigo")
             {
-                grdCuentaContable.DataSource = con.getSQL("SELECT rtrim(idcuentacontable) as ID, rtrim(nombre) as Nombre, rtrim(estadofinanciero) as [Estado Financiero], rtrim(clasificacion) as Clasificacion FROM CUENTACONTABLE where stat <> '0' AND idcuentacontable LIKE '" + txtBuscar.Text + "%'");
+                grdCuentaContable.DataSource = CapaEntidad.con.getSQL("SELECT rtrim(idcuentacontable) as ID, rtrim(nombre) as Nombre, rtrim(estadofinanciero) as [Estado Financiero], rtrim(clasificacion) as Clasificacion FROM CUENTACONTABLE where stat <> '0' AND idcuentacontable LIKE '" + txtBuscar.Text + "%'");
             }
             else if (cmbBuscar.Text == "Estado Financiero")
             {
-                grdCuentaContable.DataSource = con.getSQL("SELECT rtrim(idcuentacontable) as ID, rtrim(nombre) as Nombre, rtrim(estadofinanciero) as [Estado Financiero], rtrim(clasificacion) as Clasificacion FROM CUENTACONTABLE where stat <> '0' AND estadofinanciero LIKE '" + txtBuscar.Text + "%'");
+                grdCuentaContable.DataSource = CapaEntidad.con.getSQL("SELECT rtrim(idcuentacontable) as ID, rtrim(nombre) as Nombre, rtrim(estadofinanciero) as [Estado Financiero], rtrim(clasificacion) as Clasificacion FROM CUENTACONTABLE where stat <> '0' AND estadofinanciero LIKE '" + txtBuscar.Text + "%'");
             }
             else if (cmbBuscar.Text == "Clasificacion")
             {
-                grdCuentaContable.DataSource = con.getSQL("SELECT rtrim(idcuentacontable) as ID, rtrim(nombre) as Nombre, rtrim(estadofinanciero) as [Estado Financiero], rtrim(clasificacion) as Clasificacion FROM CUENTACONTABLE where stat <> '0' AND clasificacion LIKE '" + txtBuscar.Text + "%'");
+                grdCuentaContable.DataSource = CapaEntidad.con.getSQL("SELECT rtrim(idcuentacontable) as ID, rtrim(nombre) as Nombre, rtrim(estadofinanciero) as [Estado Financiero], rtrim(clasificacion) as Clasificacion FROM CUENTACONTABLE where stat <> '0' AND clasificacion LIKE '" + txtBuscar.Text + "%'");
             }
             
         }

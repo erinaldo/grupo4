@@ -10,32 +10,24 @@ using System.Windows.Forms;
 
 namespace Bancos_Contabilidad
 {
-    public partial class frmPrincipalAutorizacion : Form
+    public partial class frmPrincipalDocRef : Form
     {
-        
         //MRP_BD con = new MRP_BD("sa", "Cocodrilo13", "SAD2017", "JREVMENPC");
-        public frmPrincipalAutorizacion()
+        public frmPrincipalDocRef()
         {
             InitializeComponent();
             ActualizarGrid();
-            
         }
-
         public void ActualizarGrid()
         {
             grdDoc.DataSource = CapaEntidad.con.getSQL("SELECT rtrim(idDocumento) as ID, rtrim(serieDocumento) as Documento, rtrim(descripcon) as Descripcion, rtrim(fecha) as Fecha, rtrim(MONTO) as Monto  FROM DOCUMENTOREF where stat <> '0';");
         }
 
-        private void frmPrincipalAutorizacion_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            frmAutorizacion autorizacion = new frmAutorizacion();
-            autorizacion.StartPosition = FormStartPosition.CenterScreen;
-            autorizacion.Show();
+            frmDocumentoReferencia doc = new frmDocumentoReferencia();
+            doc.StartPosition = FormStartPosition.CenterScreen;
+            doc.Show();
         }
 
         private void btnRefrescar_Click(object sender, EventArgs e)
@@ -45,7 +37,14 @@ namespace Bancos_Contabilidad
 
         private void grdDoc_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            string sid = grdDoc.Rows[grdDoc.CurrentCell.RowIndex].Cells[0].Value.ToString();
+            string sDocumento = grdDoc.Rows[grdDoc.CurrentCell.RowIndex].Cells[1].Value.ToString();
+            string sDescripcion = grdDoc.Rows[grdDoc.CurrentCell.RowIndex].Cells[2].Value.ToString();
+            string sFecha = grdDoc.Rows[grdDoc.CurrentCell.RowIndex].Cells[3].Value.ToString();
+            string sMonto = grdDoc.Rows[grdDoc.CurrentCell.RowIndex].Cells[4].Value.ToString();
+            frmDocumentoReferencia temp = new frmDocumentoReferencia(sid, sDocumento, sDescripcion, sFecha, sMonto);
+            temp.StartPosition = FormStartPosition.CenterScreen;
+            temp.Show();
         }
 
         private void txtBuscar_KeyUp(object sender, KeyEventArgs e)
@@ -66,6 +65,7 @@ namespace Bancos_Contabilidad
             {
                 grdDoc.DataSource = CapaEntidad.con.getSQL("SELECT rtrim(idDocumento) as ID, rtrim(serieDocumento) as Documento, rtrim(descripcon) as Descripcion, rtrim(fecha) as Fecha, rtrim(MONTO) as Monto  FROM DOCUMENTOREF where stat <> '0' AND MONTO LIKE '" + txtBuscar.Text + "%'");
             }
+            
 
         }
 

@@ -219,7 +219,7 @@
             this.Controls.Add(this.txtNombre);
             this.Name = "frmTipoCuenta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmTipoCuenta";
+            this.Text = "Mantenimiento Cuentas Contables";
             this.grupoFiltrar.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

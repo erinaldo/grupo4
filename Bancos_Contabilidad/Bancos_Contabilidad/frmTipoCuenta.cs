@@ -79,10 +79,14 @@ namespace Bancos_Contabilidad
             }
             else if (estado == "eliminar")
              {
-                 CapaEntidad.cuentacontable p = new CapaEntidad.cuentacontable();
-                 p.ID1 = id;
-                 CapaNegocio cn = new CapaNegocio();
-                 cn.eliminarCuentaContable(p);
+                if (MessageBox.Show("Desea eliminar el registro", "Eliminacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    CapaEntidad.cuentacontable p = new CapaEntidad.cuentacontable();
+                    p.ID1 = id;
+                    CapaNegocio cn = new CapaNegocio();
+                    cn.eliminarCuentaContable(p);
+                }
+                
              }
         }
 
