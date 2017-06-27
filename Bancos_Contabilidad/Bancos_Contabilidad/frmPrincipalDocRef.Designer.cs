@@ -1,6 +1,6 @@
 ﻿namespace Bancos_Contabilidad
 {
-    partial class frmPrincipalAutorizacion
+    partial class frmPrincipalDocRef
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipalAutorizacion));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipalDocRef));
             this.grupoFiltrar = new System.Windows.Forms.GroupBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.cmbBuscar = new System.Windows.Forms.ComboBox();
@@ -47,6 +47,7 @@
             // 
             // grupoFiltrar
             // 
+            this.grupoFiltrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.grupoFiltrar.Controls.Add(this.txtBuscar);
             this.grupoFiltrar.Controls.Add(this.cmbBuscar);
             this.grupoFiltrar.Controls.Add(this.btnBuscar);
@@ -60,8 +61,8 @@
             this.grupoFiltrar.Dock = System.Windows.Forms.DockStyle.Top;
             this.grupoFiltrar.Location = new System.Drawing.Point(0, 0);
             this.grupoFiltrar.Name = "grupoFiltrar";
-            this.grupoFiltrar.Size = new System.Drawing.Size(869, 92);
-            this.grupoFiltrar.TabIndex = 24;
+            this.grupoFiltrar.Size = new System.Drawing.Size(940, 92);
+            this.grupoFiltrar.TabIndex = 26;
             this.grupoFiltrar.TabStop = false;
             this.grupoFiltrar.Text = "MENU";
             // 
@@ -161,11 +162,11 @@
             this.z.AutoSize = true;
             this.z.Dock = System.Windows.Forms.DockStyle.Right;
             this.z.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.z.Location = new System.Drawing.Point(543, 16);
+            this.z.Location = new System.Drawing.Point(405, 16);
             this.z.Name = "z";
-            this.z.Size = new System.Drawing.Size(323, 39);
+            this.z.Size = new System.Drawing.Size(532, 39);
             this.z.TabIndex = 2;
-            this.z.Text = "AUTORIZACIONES";
+            this.z.Text = "DOCUMENTO DE REFERENCIA";
             // 
             // grdDoc
             // 
@@ -176,21 +177,19 @@
             this.grdDoc.Name = "grdDoc";
             this.grdDoc.ReadOnly = true;
             this.grdDoc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdDoc.Size = new System.Drawing.Size(869, 246);
-            this.grdDoc.TabIndex = 25;
+            this.grdDoc.Size = new System.Drawing.Size(940, 327);
+            this.grdDoc.TabIndex = 27;
             this.grdDoc.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDoc_CellContentDoubleClick);
             // 
-            // frmPrincipalAutorizacion
+            // frmPrincipalDocRef
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(869, 338);
+            this.ClientSize = new System.Drawing.Size(940, 419);
             this.Controls.Add(this.grdDoc);
             this.Controls.Add(this.grupoFiltrar);
-            this.Name = "frmPrincipalAutorizacion";
-            this.Text = "Autorizacion";
-            this.Load += new System.EventHandler(this.frmPrincipalAutorizacion_Load);
+            this.Name = "frmPrincipalDocRef";
+            this.Text = "Documento de Referencia";
             this.grupoFiltrar.ResumeLayout(false);
             this.grupoFiltrar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdDoc)).EndInit();

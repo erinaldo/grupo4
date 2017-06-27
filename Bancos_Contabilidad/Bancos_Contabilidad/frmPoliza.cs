@@ -101,10 +101,14 @@ namespace Bancos_Contabilidad
             }
             else if (estado == "eliminar")
             {
-                CapaEntidad.poliza p = new CapaEntidad.poliza();
-                p.ID1 = textBox1.Text;
-                CapaNegocio cn = new CapaNegocio();
-                cn.eliminarPoliza(p);
+
+                if (MessageBox.Show("Desea eliminar el registro", "Eliminacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    CapaEntidad.poliza p = new CapaEntidad.poliza();
+                    p.ID1 = textBox1.Text;
+                    CapaNegocio cn = new CapaNegocio();
+                    cn.eliminarPoliza(p);
+                }
             }
 
         }

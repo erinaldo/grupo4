@@ -76,7 +76,7 @@ namespace Bancos_Contabilidad
 
         private void actividadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmPrincipalCuenta cuenta = new frmPrincipalCuenta();
+            frmPrincipalCtaBancaria cuenta = new frmPrincipalCtaBancaria();
             cuenta.WindowState = FormWindowState.Maximized;
             cuenta.MdiParent = this;
             cuenta.Show();
@@ -148,6 +148,40 @@ namespace Bancos_Contabilidad
         private void toolStripStatusLabel1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void documentoRefToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPrincipalDocRef cuenta = new frmPrincipalDocRef();
+            cuenta.WindowState = FormWindowState.Maximized;
+            cuenta.MdiParent = this;
+            cuenta.Show();
+        }
+
+        private void MenuPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
+        }
+
+        private void salirToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void polizasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPrincipalPoliza cuenta = new frmPrincipalPoliza();
+            cuenta.WindowState = FormWindowState.Maximized;
+            cuenta.MdiParent = this;
+            cuenta.Show();
+        }
+
+        private void monedaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPrincipalMoneda cuenta = new frmPrincipalMoneda();
+            cuenta.WindowState = FormWindowState.Maximized;
+            cuenta.MdiParent = this;
+            cuenta.Show();
         }
     }
 }
