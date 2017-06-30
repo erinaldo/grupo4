@@ -40,15 +40,7 @@
             this.actividadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.procesosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadoDeCuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ordenDeCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cuentasPorPagarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.planillaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.alumnosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pasivosFijosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cuentasPorCobrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ventasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cuotaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.activosFijosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.documentoRefToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.catalogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.polizasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cuentasContablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -152,7 +144,7 @@
             this.estadoDeCuentaToolStripMenuItem.Text = "Estado de Cuenta";
             this.estadoDeCuentaToolStripMenuItem.Click += new System.EventHandler(this.estadoDeCuentaToolStripMenuItem_Click);
             // 
-            // ordenDeCompraToolStripMenuItem
+            // documentoRefToolStripMenuItem
             // 
             this.documentoRefToolStripMenuItem.Name = "documentoRefToolStripMenuItem";
             this.documentoRefToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
@@ -332,6 +324,8 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
+        private System.Windows.Forms.ToolStripMenuItem documentoRefToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem polizasToolStripMenuItem;
     }
 }
 

@@ -58,6 +58,18 @@
     <Compile Include="frmConfiguracion.Designer.cs">
       <DependentUpon>frmConfiguracion.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmCuentaBancaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuentaBancaria.Designer.cs">
+      <DependentUpon>frmCuentaBancaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDocumentoReferencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDocumentoReferencia.Designer.cs">
+      <DependentUpon>frmDocumentoReferencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPoliza.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,7 +154,9 @@
     <Compile Include="frmPrincipalCtaBancaria.Designer.cs">
       <DependentUpon>frmPrincipalCtaBancaria.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPrincipalDocRef.cs" />
+    <Compile Include="frmPrincipalDocRef.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmPrincipalDocRef.Designer.cs">
       <DependentUpon>frmPrincipalDocRef.cs</DependentUpon>
     </Compile>
@@ -253,6 +267,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmConfiguracion.resx">
       <DependentUpon>frmConfiguracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCuentaBancaria.resx">
+      <DependentUpon>frmCuentaBancaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDocumentoReferencia.resx">
+      <DependentUpon>frmDocumentoReferencia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPoliza.resx">
       <DependentUpon>frmPoliza.cs</DependentUpon>
