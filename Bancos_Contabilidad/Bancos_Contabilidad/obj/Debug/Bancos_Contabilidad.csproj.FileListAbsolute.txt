@@ -197,3 +197,4 @@ C:\Users\jrevm\Documents\Github\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debu
 C:\Users\jrevm\Documents\Github\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.Properties.Resources.resources
 C:\Users\jrevm\Documents\Github\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.csproj.GenerateResource.Cache
 C:\Users\jrevm\Documents\Github\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmPrincipalConfiguracion.resources
+C:\Users\jrevm\Documents\Github\Bancos_Contabilidad\Bancos_Contabilidad\obj\Debug\Bancos_Contabilidad.frmConfiguracion.resources

@@ -73,7 +73,6 @@ namespace Bancos_Contabilidad
             }
             return i;
         }
-        #endregion
 
         public static int actualizarCuentaContable(CapaEntidad.cuentacontable p)
         {

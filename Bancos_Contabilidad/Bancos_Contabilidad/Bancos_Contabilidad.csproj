@@ -52,6 +52,12 @@
     <Compile Include="CapaDatos.cs" />
     <Compile Include="CapaEntidad.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="frmConfiguracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfiguracion.Designer.cs">
+      <DependentUpon>frmConfiguracion.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPoliza.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,28 @@
     </Compile>
     <Compile Include="frmPlanilla.designer.cs">
       <DependentUpon>frmPlanilla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipalConfiguracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipalConfiguracion.Designer.cs">
+      <DependentUpon>frmPrincipalConfiguracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipalCtaBancaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipalCtaBancaria.Designer.cs">
+      <DependentUpon>frmPrincipalCtaBancaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipalDocRef.cs" />
+    <Compile Include="frmPrincipalDocRef.Designer.cs">
+      <DependentUpon>frmPrincipalDocRef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipalMoneda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipalMoneda.Designer.cs">
+      <DependentUpon>frmPrincipalMoneda.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipalPoliza.cs">
       <SubType>Form</SubType>
@@ -223,6 +251,9 @@
     <Compile Include="CapaNegocio.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmConfiguracion.resx">
+      <DependentUpon>frmConfiguracion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPoliza.resx">
       <DependentUpon>frmPoliza.cs</DependentUpon>
     </EmbeddedResource>
