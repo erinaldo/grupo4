@@ -12,8 +12,6 @@ namespace Bancos_Contabilidad
 {
     public partial class frmPrincipalPoliza : Form
     {
-
-        //MRP_BD con = new MRP_BD("sa", "Cocodrilo13", "SAD2017", "JREVMENPC");
         public frmPrincipalPoliza()
         {
             InitializeComponent();

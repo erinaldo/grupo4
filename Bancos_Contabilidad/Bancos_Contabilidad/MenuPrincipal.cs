@@ -183,5 +183,13 @@ namespace Bancos_Contabilidad
             cuenta.MdiParent = this;
             cuenta.Show();
         }
+
+        private void configuracionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPrincipalConfiguracion cuenta = new frmPrincipalConfiguracion();
+            cuenta.WindowState = FormWindowState.Maximized;
+            cuenta.MdiParent = this;
+            cuenta.Show();
+        }
     }
 }

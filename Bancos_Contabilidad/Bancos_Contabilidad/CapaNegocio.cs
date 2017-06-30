@@ -75,6 +75,71 @@ namespace Bancos_Contabilidad
         }
         #endregion
 
+        #region Configuracion
+        public void insertConfig(CapaEntidad.configuraion p)
+        {
+            if (string.IsNullOrWhiteSpace(p.Nombre) || string.IsNullOrWhiteSpace(p.Razon) || string.IsNullOrWhiteSpace(p.Telefono) || string.IsNullOrWhiteSpace(p.Direccion) || string.IsNullOrWhiteSpace(p.Identificacion) || string.IsNullOrWhiteSpace(p.Moneda) || string.IsNullOrWhiteSpace(p.Pais))
+            {
+                MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                int resultado = CapaDatos.agregarConfig(p);
+
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Configuracion Guardado Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo guardar la Configuracion", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+        }
+        public void actualizarConfig(CapaEntidad.configuraion p)
+        {
+            if (string.IsNullOrWhiteSpace(p.Nombre) || string.IsNullOrWhiteSpace(p.Razon) || string.IsNullOrWhiteSpace(p.Telefono) || string.IsNullOrWhiteSpace(p.Direccion) || string.IsNullOrWhiteSpace(p.Identificacion) || string.IsNullOrWhiteSpace(p.Moneda) || string.IsNullOrWhiteSpace(p.Pais))
+            {
+                MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                int resultado = CapaDatos.actualizarConfig(p);
+
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Configuracion Editada Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo editar la Configuracion", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
+            }
+        }
+        public void eliminarConfig(CapaEntidad.configuraion p)
+        {
+            if (string.IsNullOrWhiteSpace(p.Id))
+            {
+                MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                int resultado = CapaDatos.eliminarConfig(p);
+
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Configuracion Eliminada Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo eliminar la Configuracion", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
+            }
+        }
+        #endregion
+
         #region Documento Referencia
         public void insertarDocRef(CapaEntidad.DocumentoRef p)
         {
@@ -249,17 +314,17 @@ namespace Bancos_Contabilidad
         }
         public void eliminarCuenta(CapaEntidad.cuentaBancos p)
         {
-            if (string.IsNullOrWhiteSpace(p.ID_CUENTA1))
-            {
-                MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else
-            {
+           // if (string.IsNullOrWhiteSpace(p.Nombre_cuenta))
+            //{
+               // MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //}
+            //else
+            //{
                 int resultado = CapaDatos.eliminarCuenta(p);
 
                 if (resultado > 0)
                 {
-                    MessageBox.Show("Poliza Eliminada Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Cuenta Eliminada Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
@@ -271,5 +336,5 @@ namespace Bancos_Contabilidad
         #endregion
 
     }
-}
+
 

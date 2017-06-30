@@ -386,6 +386,121 @@ namespace Bancos_Contabilidad
                 }
             }
         }
+        public class configuraion
+        {
+            string id;
+            string nombre;
+            string razon;
+            string direccion;
+            string telefono;
+            string identificacion;
+            string moneda;
+            string pais;
+
+            public string Id
+            {
+                get
+                {
+                    return id;
+                }
+
+                set
+                {
+                    id = value;
+                }
+            }
+
+            public string Nombre
+            {
+                get
+                {
+                    return nombre;
+                }
+
+                set
+                {
+                    nombre = value;
+                }
+            }
+
+            public string Razon
+            {
+                get
+                {
+                    return razon;
+                }
+
+                set
+                {
+                    razon = value;
+                }
+            }
+
+            public string Direccion
+            {
+                get
+                {
+                    return direccion;
+                }
+
+                set
+                {
+                    direccion = value;
+                }
+            }
+
+            public string Telefono
+            {
+                get
+                {
+                    return telefono;
+                }
+
+                set
+                {
+                    telefono = value;
+                }
+            }
+
+            public string Identificacion
+            {
+                get
+                {
+                    return identificacion;
+                }
+
+                set
+                {
+                    identificacion = value;
+                }
+            }
+
+            public string Moneda
+            {
+                get
+                {
+                    return moneda;
+                }
+
+                set
+                {
+                    moneda = value;
+                }
+            }
+
+            public string Pais
+            {
+                get
+                {
+                    return pais;
+                }
+
+                set
+                {
+                    pais = value;
+                }
+            }
+        }
     }
 
 }

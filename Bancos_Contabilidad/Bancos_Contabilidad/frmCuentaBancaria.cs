@@ -17,7 +17,10 @@ namespace Bancos_Contabilidad
         public frmCuentaBancaria()
         {
             InitializeComponent();
+            btnGuardar.Enabled = txtNombre.Enabled = txtNombre.Enabled = txtNumero.Enabled = cbBancos.Enabled = true;
+            btnNuevo.Enabled = btnEditar.Enabled = btnEliminar.Enabled = false;
             llenarCombo();
+            estado = "insertar";
         }
         public void limpiar()
         {
@@ -37,6 +40,7 @@ namespace Bancos_Contabilidad
             txtSaldo.Text  =  saldoCuenta;
             cbBancos.Text = banco;
             cbEmpresa.Text = emp;
+           // cbActivo.Text = estado;
             
             
         }
@@ -48,7 +52,7 @@ namespace Bancos_Contabilidad
                 con.cmd = new SqlCommand("Select idempresa,nombre_empresa  from empresa", con.cn);
                 con.dr = con.cmd.ExecuteReader();
                 DataTable dt = new DataTable();
-                cbBancos.Items.Clear();
+                //cbBancos.Items.Clear();
                 while (con.dr.Read())
                 {
                     cbEmpresa.Items.Add(con.dr.GetInt32(0).ToString() + "." + con.dr.GetString(1));
@@ -88,6 +92,8 @@ namespace Bancos_Contabilidad
                 CapaNegocio cn = new CapaNegocio();
                 cn.insertCuenta(p);
                 limpiar();
+                btnNuevo.Enabled = true;
+                btnEditar.Enabled = btnEliminar.Enabled = btnGuardar.Enabled = btnCancelar.Enabled = txtNombre.Enabled = txtNombre.Enabled = txtNumero.Enabled = cbBancos.Enabled = false;
             }
             else if (estado == "editar")
             {
@@ -103,6 +109,8 @@ namespace Bancos_Contabilidad
                 p.Estado = "1";
                 CapaNegocio cn = new CapaNegocio();
                 cn.actualizarCuenta(p);
+                btnEditar.Enabled = btnEliminar.Enabled = btnNuevo.Enabled = true;
+                btnGuardar.Enabled = btnCancelar.Enabled = txtNombre.Enabled = txtNombre.Enabled = txtNumero.Enabled = false;
             }
             else if (estado == "eliminar")
             {
@@ -110,26 +118,31 @@ namespace Bancos_Contabilidad
                 p.ID_EMP1 = textBox1.Text;
                 CapaNegocio cn = new CapaNegocio();
                 cn.eliminarCuenta(p);
+                limpiar();
+                btnNuevo.Enabled = true;
+                btnEditar.Enabled = btnEliminar.Enabled = btnGuardar.Enabled = btnCancelar.Enabled = txtNombre.Enabled = txtNombre.Enabled = txtNumero.Enabled = cbBancos.Enabled = false;
             }
 
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            limpiar();
-            btnGuardar.Enabled = btnCancelar.Enabled = txtNombre.Enabled = txtNumero.Enabled = cbBancos.Enabled = txtSaldo.Enabled = false;
+            btnNuevo.Enabled = btnEditar.Enabled = btnEliminar.Enabled = true;
+            btnEditar.Enabled = btnGuardar.Enabled = btnCancelar.Enabled = txtNombre.Enabled = txtNombre.Enabled = txtNumero.Enabled = cbBancos.Enabled = false;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
             estado = "editar";
-            btnGuardar.Enabled = btnCancelar.Enabled = txtNombre.Enabled = txtNumero.Enabled = cbBancos.Enabled  = true;
+            btnGuardar.Enabled = btnCancelar.Enabled = txtNombre.Enabled = txtNombre.Enabled = txtNumero.Enabled = cbBancos.Enabled = true;
+            btnNuevo.Enabled = btnEliminar.Enabled = false;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             estado = "eliminar";
             btnGuardar.Enabled = btnCancelar.Enabled = true;
+            btnNuevo.Enabled = btnEditar.Enabled = false;
         }
     }
 }

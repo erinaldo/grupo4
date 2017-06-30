@@ -54,6 +54,53 @@ namespace Bancos_Contabilidad
         }
         #endregion
 
+        #region Configuracion
+        public static int agregarConfig(CapaEntidad.configuraion p)
+        {
+            int i = 0;
+            try
+            {
+                CapaEntidad.con.insertSQL("INSERT INTO empresa VALUES('" + p.Nombre + "',1,'" + p.Pais + "','" + p.Moneda + "','" + p.Razon + "','" + p.Direccion + "','" + p.Telefono + "','" + p.Identificacion + "')");
+                i = 1;
+            }
+            catch (Exception e)
+            {
+                i = 0;
+            }
+            return i;
+        }
+        public static int actualizarConfig(CapaEntidad.configuraion p)
+        {
+            int i = 0;
+            try
+            {
+                string temp = "update empresa set nombre_empresa = '" + p.Nombre + "', razonsocial = '" + p.Razon + "', direccion = '" + p.Direccion + "', identificaciontributaria = '" + p.Identificacion + "', id_sede = '" + p.Pais + "', id_moneda = '" + p.Moneda + "' where id_empresa = '" + p.Id + "'";
+                MessageBox.Show(temp);
+                CapaEntidad.con.updateSQL("update empresa set telefono = '"+p.Telefono+"', nombre_empresa = '" + p.Nombre + "', razonsocial = '" + p.Razon + "', direccion = '" + p.Direccion + "', identificaciontributaria = '" + p.Identificacion + "', id_sede = '" + p.Pais + "', id_moneda = '"+p.Moneda+"' where idempresa = '" + p.Id + "'");
+                i = 1;
+            }
+            catch (Exception e)
+            {
+                i = 0;
+            }
+            return i;
+        }
+        public static int eliminarConfig(CapaEntidad.configuraion p)
+        {
+            int i = 0;
+            try
+            {
+                CapaEntidad.con.updateSQL("update empresa set activo = '0' where idempresa = '" + p.Id + "'");
+                i = 1;
+            }
+            catch (Exception e)
+            {
+                i = 0;
+            }
+            return i;
+        }
+        #endregion
+
         #region Documento Referencia
         public static int agregarDocRef(CapaEntidad.DocumentoRef p)
         {
@@ -151,6 +198,7 @@ namespace Bancos_Contabilidad
             int i = 0;
             try
             {
+                
                 CapaEntidad.con.insertSQL("INSERT INTO CUENTA VALUES('" + p.Saldo + "','" + p.Nombre_cuenta+ "','" + p.Numero_cuenta + "','" + p.Banco + "','" + p.Activo + "','" + p.Estado + "',+'" + p.ID_EMP1+ "')");
                 i = 1;
             }
@@ -165,7 +213,11 @@ namespace Bancos_Contabilidad
             int i = 0;
             try
             {
-                CapaEntidad.con.updateSQL("update cuenta set nombre_cuenta = '" + p.Nombre_cuenta + "', numero_cuenta = '" + p.Numero_cuenta + "', saldo = '" + p.Saldo + "', banco = '" + p.Banco + "', idempresa = '" + p.ID_EMP1 + "' where idcuenta = '" + p.ID_CUENTA1+ "'");
+                //  CapaEntidad.con.updateSQL("update cuenta set nombre_cuenta = '" + p.Nombre_cuenta + "', numero_cuenta = '" + p.Numero_cuenta + "', saldo = '" + p.Saldo + "', banco = '" + p.Banco + "', idempresa = '" + p.ID_EMP1 + "' where idcuenta = '" + p.ID_CUENTA1+ "'");
+
+                //update CUENTACONTABLE set nombre = '" + p.Nombre + "', estadofinanciero = '" + p.Estadofinanciero + "', clasificacion = '" + p.Clasificacion + "' where idcuentacontable = '" + p.ID1 + "'");
+               
+                CapaEntidad.con.updateSQL("update cuenta set nombre_cuenta = '" + p.Nombre_cuenta +  "' where idcuenta = '" + p.ID_CUENTA1 + "'");
                 i = 1;
             }
             catch (Exception e)
@@ -179,7 +231,7 @@ namespace Bancos_Contabilidad
             int i = 0;
             try
             {
-                CapaEntidad.con.updateSQL(" update detallepoliza set stat = '0' where idpoliza = '" + p.ID_CUENTA1 + "'");
+                CapaEntidad.con.updateSQL(" update cuenta set stat = '0' where idcuenta = '" + p.ID_CUENTA1 + "'");
                 i = 1;
             }
             catch (Exception e)

@@ -47,12 +47,12 @@
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbEmpresa = new System.Windows.Forms.ComboBox();
             this.cbActivo = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cbBancos = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.cbEmpresa = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.grupoFiltrar.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -238,6 +238,23 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos generales";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(18, 22);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(48, 13);
+            this.label4.TabIndex = 142;
+            this.label4.Text = "Empresa";
+            // 
+            // cbEmpresa
+            // 
+            this.cbEmpresa.FormattingEnabled = true;
+            this.cbEmpresa.Location = new System.Drawing.Point(81, 16);
+            this.cbEmpresa.Name = "cbEmpresa";
+            this.cbEmpresa.Size = new System.Drawing.Size(252, 21);
+            this.cbEmpresa.TabIndex = 141;
+            // 
             // cbActivo
             // 
             this.cbActivo.FormattingEnabled = true;
@@ -262,11 +279,11 @@
             // 
             this.cbBancos.FormattingEnabled = true;
             this.cbBancos.Items.AddRange(new object[] {
-            "Banco Industrial",
-            "Banco de Desarrollo Rural",
-            "Banco G&T Continental",
-            "Banco Reformador"});
-            this.cbBancos.Location = new System.Drawing.Point(81, 43);
+            "BI",
+            "BANRURAL",
+            "G&T",
+            "BAM"});
+            this.cbBancos.Location = new System.Drawing.Point(81, 46);
             this.cbBancos.Name = "cbBancos";
             this.cbBancos.Size = new System.Drawing.Size(252, 21);
             this.cbBancos.TabIndex = 138;
@@ -280,23 +297,6 @@
             this.label7.TabIndex = 133;
             this.label7.Text = "Activo";
             // 
-            // cbEmpresa
-            // 
-            this.cbEmpresa.FormattingEnabled = true;
-            this.cbEmpresa.Location = new System.Drawing.Point(81, 16);
-            this.cbEmpresa.Name = "cbEmpresa";
-            this.cbEmpresa.Size = new System.Drawing.Size(252, 21);
-            this.cbEmpresa.TabIndex = 141;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 22);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 13);
-            this.label4.TabIndex = 142;
-            this.label4.Text = "Empresa";
-            // 
             // frmCuentaBancaria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,6 +309,7 @@
             this.Controls.Add(this.grupoFiltrar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCuentaBancaria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CuentaBancaria";
             this.Load += new System.EventHandler(this.frmCuentaBancaria_Load);
             this.grupoFiltrar.ResumeLayout(false);
