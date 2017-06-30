@@ -85,6 +85,8 @@ namespace Bancos_Contabilidad
             string sSaldo = grdCuenta.Rows[grdCuenta.CurrentCell.RowIndex].Cells[3].Value.ToString();
             string sEmpresa = grdCuenta.Rows[grdCuenta.CurrentCell.RowIndex].Cells[4].Value.ToString();
             string sBanco = grdCuenta.Rows[grdCuenta.CurrentCell.RowIndex].Cells[5].Value.ToString();
+            
+
 
             frmCuentaBancaria temp = new frmCuentaBancaria(sid, sNombre, sNumero, sSaldo, sBanco,sEmpresa);
             temp.Show();

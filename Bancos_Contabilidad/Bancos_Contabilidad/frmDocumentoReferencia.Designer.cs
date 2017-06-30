@@ -83,6 +83,7 @@
             // 
             // btnCancelar
             // 
+            this.btnCancelar.Enabled = false;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.Location = new System.Drawing.Point(258, 13);
             this.btnCancelar.Name = "btnCancelar";
@@ -144,6 +145,7 @@
             // 
             // txtDocumento
             // 
+            this.txtDocumento.Enabled = false;
             this.txtDocumento.Location = new System.Drawing.Point(185, 77);
             this.txtDocumento.Name = "txtDocumento";
             this.txtDocumento.Size = new System.Drawing.Size(249, 20);
@@ -152,6 +154,7 @@
             // 
             // txtDescripcion
             // 
+            this.txtDescripcion.Enabled = false;
             this.txtDescripcion.Location = new System.Drawing.Point(185, 103);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(249, 20);
@@ -169,6 +172,7 @@
             // 
             // txtMonto
             // 
+            this.txtMonto.Enabled = false;
             this.txtMonto.Location = new System.Drawing.Point(185, 129);
             this.txtMonto.Name = "txtMonto";
             this.txtMonto.Size = new System.Drawing.Size(249, 20);

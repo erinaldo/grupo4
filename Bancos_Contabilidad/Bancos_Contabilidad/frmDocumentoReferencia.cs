@@ -17,6 +17,9 @@ namespace Bancos_Contabilidad
         public frmDocumentoReferencia()
         {
             InitializeComponent();
+            txtDescripcion.Enabled = txtDocumento.Enabled = txtMonto.Enabled = btnGuardar.Enabled = true;
+            btnNuevo.Enabled = btnEditar.Enabled = btnEliminar.Enabled = false;
+            estado = "insertar";
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -56,6 +59,9 @@ namespace Bancos_Contabilidad
                 p.Estado = "1";
                 CapaNegocio cn = new CapaNegocio();
                 cn.insertarDocRef(p);
+                limpiar();
+                btnNuevo.Enabled = true;
+                btnEditar.Enabled = btnEliminar.Enabled = btnGuardar.Enabled = btnCancelar.Enabled = txtDescripcion.Enabled = txtMonto.Enabled = txtDocumento.Enabled = false;
             }
             else if (estado == "editar")
             {
@@ -67,6 +73,8 @@ namespace Bancos_Contabilidad
                 p.ID1 = Sid;
                 CapaNegocio cn = new CapaNegocio();
                 cn.actualizarDocRef(p);
+                btnEditar.Enabled = btnEliminar.Enabled = btnNuevo.Enabled = true;
+                btnGuardar.Enabled = btnCancelar.Enabled = txtDescripcion.Enabled = txtMonto.Enabled = txtDocumento.Enabled = false;
             }
             else if (estado == "eliminar")
             {
@@ -76,6 +84,9 @@ namespace Bancos_Contabilidad
                     p.ID1 = Sid;
                     CapaNegocio cn = new CapaNegocio();
                     cn.eliminarDocRef(p);
+                    limpiar();
+                    btnNuevo.Enabled = true;
+                    btnEditar.Enabled = btnEliminar.Enabled = btnGuardar.Enabled = btnCancelar.Enabled = txtDescripcion.Enabled = txtMonto.Enabled = txtDocumento.Enabled = false;
                 }
             }
 
@@ -84,13 +95,15 @@ namespace Bancos_Contabilidad
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             limpiar();
-            btnGuardar.Enabled = btnCancelar.Enabled = txtDescripcion.Enabled = txtMonto.Enabled = txtDocumento.Enabled =  false;
+            btnNuevo.Enabled = btnEditar.Enabled = btnEliminar.Enabled = true;
+            btnEditar.Enabled = btnGuardar.Enabled = btnCancelar.Enabled = txtDescripcion.Enabled = txtMonto.Enabled = txtDocumento.Enabled = false;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
             estado = "editar";
             btnGuardar.Enabled = btnCancelar.Enabled = txtDescripcion.Enabled = txtMonto.Enabled = txtDocumento.Enabled  = true;
+            btnNuevo.Enabled = btnEliminar.Enabled = false;
 
         }
 
@@ -98,6 +111,7 @@ namespace Bancos_Contabilidad
         {
             estado = "eliminar";
             btnGuardar.Enabled = btnCancelar.Enabled = true;
+            btnNuevo.Enabled = btnEditar.Enabled = false;
         }
     }
 }
