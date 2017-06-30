@@ -19,7 +19,6 @@ namespace Bancos_Contabilidad
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-
             frmPlanilla Menu = new frmPlanilla();
             Menu.Show();
         }
