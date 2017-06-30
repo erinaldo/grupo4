@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Bancos_Contabilidad
 {
-    public partial class frmBalanceGeneral : Form
+    public partial class PrincipalOrdenCompra : Form
     {
-        public frmBalanceGeneral()
+        public PrincipalOrdenCompra()
         {
             InitializeComponent();
             dataGridView1.Rows.Add("ACTIVO","");

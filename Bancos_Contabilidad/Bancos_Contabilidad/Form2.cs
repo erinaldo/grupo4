@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Bancos_Contabilidad
 {
-    public partial class frmPrincipalEstadosFinancieros : Form
+    public partial class Form2 : Form
     {
-        public frmPrincipalEstadosFinancieros()
+        public Form2()
         {
             InitializeComponent();
-        }
-
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            frmEstadosFinancieros fef = new frmEstadosFinancieros();
-            fef.Show();
         }
     }
 }

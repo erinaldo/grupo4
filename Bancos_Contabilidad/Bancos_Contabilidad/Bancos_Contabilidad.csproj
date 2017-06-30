@@ -52,6 +52,24 @@
     <Compile Include="CapaDatos.cs" />
     <Compile Include="CapaEntidad.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="frmConfiguracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfiguracion.Designer.cs">
+      <DependentUpon>frmConfiguracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCuentaBancaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuentaBancaria.Designer.cs">
+      <DependentUpon>frmCuentaBancaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDocumentoReferencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDocumentoReferencia.Designer.cs">
+      <DependentUpon>frmDocumentoReferencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPoliza.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +141,30 @@
     </Compile>
     <Compile Include="frmPlanilla.designer.cs">
       <DependentUpon>frmPlanilla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipalConfiguracion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipalConfiguracion.Designer.cs">
+      <DependentUpon>frmPrincipalConfiguracion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipalCtaBancaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipalCtaBancaria.Designer.cs">
+      <DependentUpon>frmPrincipalCtaBancaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipalDocRef.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipalDocRef.Designer.cs">
+      <DependentUpon>frmPrincipalDocRef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrincipalMoneda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipalMoneda.Designer.cs">
+      <DependentUpon>frmPrincipalMoneda.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipalPoliza.cs">
       <SubType>Form</SubType>
@@ -223,6 +265,15 @@
     <Compile Include="CapaNegocio.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmConfiguracion.resx">
+      <DependentUpon>frmConfiguracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCuentaBancaria.resx">
+      <DependentUpon>frmCuentaBancaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDocumentoReferencia.resx">
+      <DependentUpon>frmDocumentoReferencia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPoliza.resx">
       <DependentUpon>frmPoliza.cs</DependentUpon>
     </EmbeddedResource>
@@ -262,6 +313,12 @@
     <EmbeddedResource Include="frmPrincipalAutorizacion.resx">
       <DependentUpon>frmPrincipalAutorizacion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipalConfiguracion.resx">
+      <DependentUpon>frmPrincipalConfiguracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipalCtaBancaria.resx">
+      <DependentUpon>frmPrincipalCtaBancaria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipalCuenta.resx">
       <DependentUpon>frmPrincipalCuenta.cs</DependentUpon>
     </EmbeddedResource>
@@ -271,11 +328,17 @@
     <EmbeddedResource Include="frmPrincipalCuentaPorPagar.resx">
       <DependentUpon>frmPrincipalCuentaPorPagar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipalDocRef.resx">
+      <DependentUpon>frmPrincipalDocRef.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipalEstadoDeCuenta.resx">
       <DependentUpon>frmPrincipalEstadoDeCuenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipalEstadosFinancieros.resx">
       <DependentUpon>frmPrincipalEstadosFinancieros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipalMoneda.resx">
+      <DependentUpon>frmPrincipalMoneda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipalPoliza.resx">
       <DependentUpon>frmPrincipalPoliza.cs</DependentUpon>

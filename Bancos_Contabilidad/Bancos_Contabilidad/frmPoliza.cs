@@ -20,6 +20,9 @@ namespace Bancos_Contabilidad
         {
             InitializeComponent();
             llenarCombo();
+            btnGuardar.Enabled = txtNombre.Enabled = txtTotal.Enabled = cmbCuenta.Enabled = dtpFecha.Enabled = true;
+            btnNuevo.Enabled = btnEditar.Enabled = btnEliminar.Enabled = false;
+            estado = "insertar";
         }
 
         public void limpiar()
@@ -84,7 +87,11 @@ namespace Bancos_Contabilidad
                 p.Status = "1";
                 CapaNegocio cn = new CapaNegocio();
                 cn.insertPoliza(p);
-            }else if(estado == "editar")
+                limpiar();
+                btnNuevo.Enabled = true;
+                btnEditar.Enabled = btnEliminar.Enabled = btnGuardar.Enabled = btnCancelar.Enabled = txtNombre.Enabled = txtTotal.Enabled = cmbCuenta.Enabled = dtpFecha.Enabled = false;
+            }
+            else if(estado == "editar")
             {
                 CapaEntidad.poliza p = new CapaEntidad.poliza();
                 p.ID1 = textBox1.Text;
@@ -98,33 +105,44 @@ namespace Bancos_Contabilidad
                 CapaNegocio cn = new CapaNegocio();
                 p.Status = "1";
                 cn.actualizarPoliza(p);
+                btnEditar.Enabled = btnEliminar.Enabled = btnNuevo.Enabled = true;
+                btnGuardar.Enabled = btnCancelar.Enabled = txtNombre.Enabled = txtTotal.Enabled = cmbCuenta.Enabled = dtpFecha.Enabled = false;
             }
             else if (estado == "eliminar")
             {
-                CapaEntidad.poliza p = new CapaEntidad.poliza();
-                p.ID1 = textBox1.Text;
-                CapaNegocio cn = new CapaNegocio();
-                cn.eliminarPoliza(p);
+
+                if (MessageBox.Show("Desea eliminar el registro", "Eliminacion", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    CapaEntidad.poliza p = new CapaEntidad.poliza();
+                    p.ID1 = textBox1.Text;
+                    CapaNegocio cn = new CapaNegocio();
+                    cn.eliminarPoliza(p);
+                    limpiar();
+                    btnNuevo.Enabled = true;
+                    btnEditar.Enabled = btnEliminar.Enabled = btnGuardar.Enabled = btnCancelar.Enabled = txtNombre.Enabled = txtTotal.Enabled = cmbCuenta.Enabled = dtpFecha.Enabled = false;
+                }
             }
 
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            limpiar();
-            btnGuardar.Enabled = btnCancelar.Enabled = txtNombre.Enabled = txtTotal.Enabled = cmbCuenta.Enabled = dtpFecha.Enabled = false;
+            btnNuevo.Enabled = btnEditar.Enabled = btnEliminar.Enabled =true;
+            btnEditar.Enabled = btnGuardar.Enabled = btnCancelar.Enabled = txtNombre.Enabled = txtTotal.Enabled = cmbCuenta.Enabled = dtpFecha.Enabled = false;
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
             estado = "editar";
             btnGuardar.Enabled = btnCancelar.Enabled = txtNombre.Enabled = txtTotal.Enabled = cmbCuenta.Enabled = dtpFecha.Enabled = true;
+            btnNuevo.Enabled = btnEliminar.Enabled = false;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             estado = "eliminar";
             btnGuardar.Enabled = btnCancelar.Enabled = true;
+            btnNuevo.Enabled = btnEditar.Enabled = false;
         }
     }
 }

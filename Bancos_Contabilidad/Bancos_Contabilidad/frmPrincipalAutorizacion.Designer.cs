@@ -40,9 +40,9 @@
             this.btnRefrescar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.z = new System.Windows.Forms.Label();
-            this.grdEmpresa = new System.Windows.Forms.DataGridView();
+            this.grdDoc = new System.Windows.Forms.DataGridView();
             this.grupoFiltrar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdEmpresa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdDoc)).BeginInit();
             this.SuspendLayout();
             // 
             // grupoFiltrar
@@ -71,6 +71,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(200, 20);
             this.txtBuscar.TabIndex = 27;
+            this.txtBuscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyUp);
             // 
             // cmbBuscar
             // 
@@ -78,9 +79,9 @@
             this.cmbBuscar.FormattingEnabled = true;
             this.cmbBuscar.Items.AddRange(new object[] {
             "Codigo",
-            "Nombre",
-            "Direccion",
-            "Telefono"});
+            "Documento",
+            "Descripcion",
+            "Monto"});
             this.cmbBuscar.Location = new System.Drawing.Point(6, 61);
             this.cmbBuscar.Name = "cmbBuscar";
             this.cmbBuscar.Size = new System.Drawing.Size(146, 21);
@@ -103,6 +104,7 @@
             this.btnIrUltimo.Size = new System.Drawing.Size(48, 42);
             this.btnIrUltimo.TabIndex = 22;
             this.btnIrUltimo.UseVisualStyleBackColor = true;
+            this.btnIrUltimo.Click += new System.EventHandler(this.btnIrUltimo_Click);
             // 
             // btnSiguiente
             // 
@@ -112,6 +114,7 @@
             this.btnSiguiente.Size = new System.Drawing.Size(48, 42);
             this.btnSiguiente.TabIndex = 21;
             this.btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
             // btnAnterior
             // 
@@ -121,6 +124,7 @@
             this.btnAnterior.Size = new System.Drawing.Size(48, 42);
             this.btnAnterior.TabIndex = 20;
             this.btnAnterior.UseVisualStyleBackColor = true;
+            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
             // btnIrPrimero
             // 
@@ -130,6 +134,7 @@
             this.btnIrPrimero.Size = new System.Drawing.Size(48, 42);
             this.btnIrPrimero.TabIndex = 19;
             this.btnIrPrimero.UseVisualStyleBackColor = true;
+            this.btnIrPrimero.Click += new System.EventHandler(this.btnIrPrimero_Click);
             // 
             // btnRefrescar
             // 
@@ -139,6 +144,7 @@
             this.btnRefrescar.Size = new System.Drawing.Size(48, 42);
             this.btnRefrescar.TabIndex = 18;
             this.btnRefrescar.UseVisualStyleBackColor = true;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
             // btnNuevo
             // 
@@ -161,17 +167,18 @@
             this.z.TabIndex = 2;
             this.z.Text = "AUTORIZACIONES";
             // 
-            // grdEmpresa
+            // grdDoc
             // 
-            this.grdEmpresa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.grdEmpresa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grdEmpresa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grdEmpresa.Location = new System.Drawing.Point(0, 92);
-            this.grdEmpresa.Name = "grdEmpresa";
-            this.grdEmpresa.ReadOnly = true;
-            this.grdEmpresa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdEmpresa.Size = new System.Drawing.Size(869, 246);
-            this.grdEmpresa.TabIndex = 25;
+            this.grdDoc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.grdDoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdDoc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdDoc.Location = new System.Drawing.Point(0, 92);
+            this.grdDoc.Name = "grdDoc";
+            this.grdDoc.ReadOnly = true;
+            this.grdDoc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grdDoc.Size = new System.Drawing.Size(869, 246);
+            this.grdDoc.TabIndex = 25;
+            this.grdDoc.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDoc_CellContentDoubleClick);
             // 
             // frmPrincipalAutorizacion
             // 
@@ -179,14 +186,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(869, 338);
-            this.Controls.Add(this.grdEmpresa);
+            this.Controls.Add(this.grdDoc);
             this.Controls.Add(this.grupoFiltrar);
             this.Name = "frmPrincipalAutorizacion";
             this.Text = "Autorizacion";
             this.Load += new System.EventHandler(this.frmPrincipalAutorizacion_Load);
             this.grupoFiltrar.ResumeLayout(false);
             this.grupoFiltrar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grdEmpresa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdDoc)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -204,6 +211,6 @@
         public System.Windows.Forms.Button btnRefrescar;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Label z;
-        public System.Windows.Forms.DataGridView grdEmpresa;
+        public System.Windows.Forms.DataGridView grdDoc;
     }
 }

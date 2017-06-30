@@ -1,6 +1,6 @@
 ﻿namespace Bancos_Contabilidad
 {
-    partial class frmPrincipalOrdenCompra
+    partial class frmPrincipalInventarios
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipalOrdenCompra));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipalInventarios));
             this.grdEmpresa = new System.Windows.Forms.DataGridView();
-            this.cmbBuscar = new System.Windows.Forms.ComboBox();
             this.grupoFiltrar = new System.Windows.Forms.GroupBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.cmbBuscar = new System.Windows.Forms.ComboBox();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnIrUltimo = new System.Windows.Forms.Button();
             this.btnSiguiente = new System.Windows.Forms.Button();
@@ -54,8 +54,36 @@
             this.grdEmpresa.Name = "grdEmpresa";
             this.grdEmpresa.ReadOnly = true;
             this.grdEmpresa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdEmpresa.Size = new System.Drawing.Size(874, 228);
-            this.grdEmpresa.TabIndex = 24;
+            this.grdEmpresa.Size = new System.Drawing.Size(852, 209);
+            this.grdEmpresa.TabIndex = 26;
+            // 
+            // grupoFiltrar
+            // 
+            this.grupoFiltrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.grupoFiltrar.Controls.Add(this.txtBuscar);
+            this.grupoFiltrar.Controls.Add(this.cmbBuscar);
+            this.grupoFiltrar.Controls.Add(this.btnBuscar);
+            this.grupoFiltrar.Controls.Add(this.btnIrUltimo);
+            this.grupoFiltrar.Controls.Add(this.btnSiguiente);
+            this.grupoFiltrar.Controls.Add(this.btnAnterior);
+            this.grupoFiltrar.Controls.Add(this.btnIrPrimero);
+            this.grupoFiltrar.Controls.Add(this.btnRefrescar);
+            this.grupoFiltrar.Controls.Add(this.btnNuevo);
+            this.grupoFiltrar.Controls.Add(this.z);
+            this.grupoFiltrar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.grupoFiltrar.Location = new System.Drawing.Point(0, 0);
+            this.grupoFiltrar.Name = "grupoFiltrar";
+            this.grupoFiltrar.Size = new System.Drawing.Size(852, 92);
+            this.grupoFiltrar.TabIndex = 25;
+            this.grupoFiltrar.TabStop = false;
+            this.grupoFiltrar.Text = "MENU";
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Location = new System.Drawing.Point(158, 62);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(200, 20);
+            this.txtBuscar.TabIndex = 27;
             // 
             // cmbBuscar
             // 
@@ -70,33 +98,6 @@
             this.cmbBuscar.Name = "cmbBuscar";
             this.cmbBuscar.Size = new System.Drawing.Size(146, 21);
             this.cmbBuscar.TabIndex = 26;
-            // 
-            // grupoFiltrar
-            // 
-            this.grupoFiltrar.Controls.Add(this.txtBuscar);
-            this.grupoFiltrar.Controls.Add(this.cmbBuscar);
-            this.grupoFiltrar.Controls.Add(this.btnBuscar);
-            this.grupoFiltrar.Controls.Add(this.btnIrUltimo);
-            this.grupoFiltrar.Controls.Add(this.btnSiguiente);
-            this.grupoFiltrar.Controls.Add(this.btnAnterior);
-            this.grupoFiltrar.Controls.Add(this.btnIrPrimero);
-            this.grupoFiltrar.Controls.Add(this.btnRefrescar);
-            this.grupoFiltrar.Controls.Add(this.btnNuevo);
-            this.grupoFiltrar.Controls.Add(this.z);
-            this.grupoFiltrar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.grupoFiltrar.Location = new System.Drawing.Point(0, 0);
-            this.grupoFiltrar.Name = "grupoFiltrar";
-            this.grupoFiltrar.Size = new System.Drawing.Size(874, 92);
-            this.grupoFiltrar.TabIndex = 23;
-            this.grupoFiltrar.TabStop = false;
-            this.grupoFiltrar.Text = "MENU";
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Location = new System.Drawing.Point(158, 62);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(200, 20);
-            this.txtBuscar.TabIndex = 27;
             // 
             // btnBuscar
             // 
@@ -160,29 +161,27 @@
             this.btnNuevo.Size = new System.Drawing.Size(48, 42);
             this.btnNuevo.TabIndex = 17;
             this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // z
             // 
             this.z.AutoSize = true;
             this.z.Dock = System.Windows.Forms.DockStyle.Right;
             this.z.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.z.Location = new System.Drawing.Point(511, 16);
+            this.z.Location = new System.Drawing.Point(599, 16);
             this.z.Name = "z";
-            this.z.Size = new System.Drawing.Size(360, 39);
+            this.z.Size = new System.Drawing.Size(250, 39);
             this.z.TabIndex = 2;
-            this.z.Text = "ORDEN DE COMPRA";
+            this.z.Text = "INVENTARIOS";
             // 
-            // frmPrincipalOrdenCompra
+            // frmPrincipalInventarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(874, 320);
+            this.ClientSize = new System.Drawing.Size(852, 301);
             this.Controls.Add(this.grdEmpresa);
             this.Controls.Add(this.grupoFiltrar);
-            this.Name = "frmPrincipalOrdenCompra";
-            this.Text = "ORDEN DE COMPRA";
+            this.Name = "frmPrincipalInventarios";
+            this.Text = "INVENTARIOS";
             ((System.ComponentModel.ISupportInitialize)(this.grdEmpresa)).EndInit();
             this.grupoFiltrar.ResumeLayout(false);
             this.grupoFiltrar.PerformLayout();
@@ -193,9 +192,9 @@
         #endregion
 
         public System.Windows.Forms.DataGridView grdEmpresa;
-        private System.Windows.Forms.ComboBox cmbBuscar;
         private System.Windows.Forms.GroupBox grupoFiltrar;
         private System.Windows.Forms.TextBox txtBuscar;
+        private System.Windows.Forms.ComboBox cmbBuscar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnIrUltimo;
         private System.Windows.Forms.Button btnSiguiente;

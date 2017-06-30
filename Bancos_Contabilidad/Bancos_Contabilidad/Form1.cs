@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Bancos_Contabilidad
 {
-    public partial class frmPrincipalOrdenCompra : Form
+    public partial class Form1 : Form
     {
-        public frmPrincipalOrdenCompra()
+        public Form1()
         {
             InitializeComponent();
-        }
-
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            frmOrdenCompra foc = new frmOrdenCompra();
-            foc.Show();
         }
     }
 }
