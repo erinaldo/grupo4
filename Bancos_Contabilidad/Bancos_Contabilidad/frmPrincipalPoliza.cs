@@ -20,7 +20,7 @@ namespace Bancos_Contabilidad
 
         public void ActualizarGrid()
         {
-            grdPoliza.DataSource= CapaEntidad.con.getSQL("SELECT rtrim(idpoliza) as ID, rtrim(detallepoliza.nombre) as Nombre, rtrim(total) as Total, rtrim(fecha) as Fecha, rtrim(concat(cuentacontable.idcuentacontable,'.',cuentacontable.nombre)) as CuentaContable, rtrim(concat(empresa.idempresa,'.',empresa.nombre_empresa)) as Empresa FROM DETALLEPOLIZA, Empresa, CUENTACONTABLE where DETALLEPOLIZA.idempresa = Empresa.idempresa AND DETALLEPOLIZA.idcuentacontable = CUENTACONTABLE.idcuentacontable AND detallepoliza.stat <> '0'");
+            grdPoliza.DataSource= CapaEntidad.con.getSQL("SELECT rtrim(idpoliza) as ID, rtrim(nombre) as Nombre, rtrim(descripcion) as Descripcion, rtrim(fecha) as Fecha, rtrim(concat(empresa.idempresa,'.',empresa.nombre_empresa)) as Empresa FROM POLIZA, Empresa where POLIZA.idempresa = Empresa.idempresa and poliza.stat <> '0'");
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -38,11 +38,9 @@ namespace Bancos_Contabilidad
         {
             string sid = grdPoliza.Rows[grdPoliza.CurrentCell.RowIndex].Cells[0].Value.ToString();
             string sNombre = grdPoliza.Rows[grdPoliza.CurrentCell.RowIndex].Cells[1].Value.ToString();
-            string sTotal = grdPoliza.Rows[grdPoliza.CurrentCell.RowIndex].Cells[2].Value.ToString();
+            string sDescripcion = grdPoliza.Rows[grdPoliza.CurrentCell.RowIndex].Cells[2].Value.ToString();
             string sFecha = grdPoliza.Rows[grdPoliza.CurrentCell.RowIndex].Cells[3].Value.ToString();
-            string sCuenta = grdPoliza.Rows[grdPoliza.CurrentCell.RowIndex].Cells[4].Value.ToString();
-            string sEmpresa = grdPoliza.Rows[grdPoliza.CurrentCell.RowIndex].Cells[5].Value.ToString();
-            frmPoliza temp = new frmPoliza(sid, sNombre, sTotal,sFecha,sCuenta,sEmpresa);
+            frmPoliza temp = new frmPoliza(sid, sNombre, sDescripcion, sFecha);
             temp.Show();
         }
 
@@ -50,29 +48,19 @@ namespace Bancos_Contabilidad
         {
             if(cmbBuscar.Text == "Nombre")
             {
-                grdPoliza.DataSource = CapaEntidad.con.getSQL("SELECT rtrim(idpoliza) as ID, rtrim(detallepoliza.nombre) as Nombre, rtrim(total) as Total, rtrim(fecha) as Fecha, rtrim(concat(cuentacontable.idcuentacontable,'.',cuentacontable.nombre)) as CuentaContable, rtrim(concat(empresa.idempresa,'.',empresa.nombre_empresa)) as Empresa FROM DETALLEPOLIZA, Empresa, CUENTACONTABLE where DETALLEPOLIZA.idempresa = Empresa.idempresa AND DETALLEPOLIZA.idcuentacontable = CUENTACONTABLE.idcuentacontable AND detallepoliza.stat <> '0'AND detallepoliza.nombre LIKE '" + txtBuscar.Text + "%'");
-            }else if(cmbBuscar.Text == "Codigo")
+                grdPoliza.DataSource = CapaEntidad.con.getSQL("SELECT rtrim(idpoliza) as ID, rtrim(nombre) as Nombre, rtrim(descripcion) as Descripcion, rtrim(fecha) as Fecha, rtrim(concat(empresa.idempresa,'.',empresa.nombre_empresa)) as Empresa FROM POLIZA, Empresa where POLIZA.idempresa = Empresa.idempresa and poliza.stat <> '0' AND poliza.nombre LIKE '" + txtBuscar.Text + "%'");
+            }else if(cmbBuscar.Text == "descripcion")
             {
-                grdPoliza.DataSource = CapaEntidad.con.getSQL("SELECT rtrim(idpoliza) as ID, rtrim(detallepoliza.nombre) as Nombre, rtrim(total) as Total, rtrim(fecha) as Fecha, rtrim(concat(cuentacontable.idcuentacontable,'.',cuentacontable.nombre)) as CuentaContable, rtrim(concat(empresa.idempresa,'.',empresa.nombre_empresa)) as Empresa FROM DETALLEPOLIZA, Empresa, CUENTACONTABLE where DETALLEPOLIZA.idempresa = Empresa.idempresa AND DETALLEPOLIZA.idcuentacontable = CUENTACONTABLE.idcuentacontable AND detallepoliza.stat <> '0'AND detallepoliza.idpoliza LIKE '" + txtBuscar.Text + "%'");
-            }
-            else if (cmbBuscar.Text == "Total")
-            {
-                grdPoliza.DataSource = CapaEntidad.con.getSQL("SELECT rtrim(idpoliza) as ID, rtrim(detallepoliza.nombre) as Nombre, rtrim(total) as Total, rtrim(fecha) as Fecha, rtrim(concat(cuentacontable.idcuentacontable,'.',cuentacontable.nombre)) as CuentaContable, rtrim(concat(empresa.idempresa,'.',empresa.nombre_empresa)) as Empresa FROM DETALLEPOLIZA, Empresa, CUENTACONTABLE where DETALLEPOLIZA.idempresa = Empresa.idempresa AND DETALLEPOLIZA.idcuentacontable = CUENTACONTABLE.idcuentacontable AND detallepoliza.stat <> '0'AND detallepoliza.total LIKE '" + txtBuscar.Text + "%'");
+                grdPoliza.DataSource = CapaEntidad.con.getSQL("SELECT rtrim(idpoliza) as ID, rtrim(nombre) as Nombre, rtrim(descripcion) as Descripcion, rtrim(fecha) as Fecha, rtrim(concat(empresa.idempresa,'.',empresa.nombre_empresa)) as Empresa FROM POLIZA, Empresa where POLIZA.idempresa = Empresa.idempresa and poliza.stat <> '0' AND poliza.descripcion LIKE '" + txtBuscar.Text + "%'");
             }
             else if (cmbBuscar.Text == "Fecha")
             {
-                grdPoliza.DataSource = CapaEntidad.con.getSQL("SELECT rtrim(idpoliza) as ID, rtrim(detallepoliza.nombre) as Nombre, rtrim(total) as Total, rtrim(fecha) as Fecha, rtrim(concat(cuentacontable.idcuentacontable,'.',cuentacontable.nombre)) as CuentaContable, rtrim(concat(empresa.idempresa,'.',empresa.nombre_empresa)) as Empresa FROM DETALLEPOLIZA, Empresa, CUENTACONTABLE where DETALLEPOLIZA.idempresa = Empresa.idempresa AND DETALLEPOLIZA.idcuentacontable = CUENTACONTABLE.idcuentacontable AND detallepoliza.stat <> '0'AND detallepoliza.fecha LIKE '" + txtBuscar.Text + "%'");
-            }
-            else if (cmbBuscar.Text == "Cuenta")
-            {
-                grdPoliza.DataSource = CapaEntidad.con.getSQL("SELECT rtrim(idpoliza) as ID, rtrim(detallepoliza.nombre) as Nombre, rtrim(total) as Total, rtrim(fecha) as Fecha, rtrim(concat(cuentacontable.idcuentacontable,'.',cuentacontable.nombre)) as CuentaContable, rtrim(concat(empresa.idempresa,'.',empresa.nombre_empresa)) as Empresa FROM DETALLEPOLIZA, Empresa, CUENTACONTABLE where DETALLEPOLIZA.idempresa = Empresa.idempresa AND DETALLEPOLIZA.idcuentacontable = CUENTACONTABLE.idcuentacontable AND detallepoliza.stat <> '0'AND cuentacontable.nombre LIKE '" + txtBuscar.Text + "%'");
+                grdPoliza.DataSource = CapaEntidad.con.getSQL("SELECT rtrim(idpoliza) as ID, rtrim(nombre) as Nombre, rtrim(descripcion) as Descripcion, rtrim(fecha) as Fecha, rtrim(concat(empresa.idempresa,'.',empresa.nombre_empresa)) as Empresa FROM POLIZA, Empresa where POLIZA.idempresa = Empresa.idempresa and poliza.stat <> '0' AND detallepoliza.fecha LIKE '" + txtBuscar.Text + "%'");
             }
             else if (cmbBuscar.Text == "Empresa")
             {
-                grdPoliza.DataSource = CapaEntidad.con.getSQL("SELECT rtrim(idpoliza) as ID, rtrim(detallepoliza.nombre) as Nombre, rtrim(total) as Total, rtrim(fecha) as Fecha, rtrim(concat(cuentacontable.idcuentacontable,'.',cuentacontable.nombre)) as CuentaContable, rtrim(concat(empresa.idempresa,'.',empresa.nombre_empresa)) as Empresa FROM DETALLEPOLIZA, Empresa, CUENTACONTABLE where DETALLEPOLIZA.idempresa = Empresa.idempresa AND DETALLEPOLIZA.idcuentacontable = CUENTACONTABLE.idcuentacontable AND detallepoliza.stat <> '0'AND empresa.nombre_empresa LIKE '" + txtBuscar.Text + "%'");
+                grdPoliza.DataSource = CapaEntidad.con.getSQL("SELECT rtrim(idpoliza) as ID, rtrim(nombre) as Nombre, rtrim(descripcion) as Descripcion, rtrim(fecha) as Fecha, rtrim(concat(empresa.idempresa,'.',empresa.nombre_empresa)) as Empresa FROM POLIZA, Empresa where POLIZA.idempresa = Empresa.idempresa and poliza.stat <> '0' AND empresa.nombre_empresa LIKE '" + txtBuscar.Text + "%'");
             }
-
-
         }
 
         private void btnIrPrimero_Click(object sender, EventArgs e)

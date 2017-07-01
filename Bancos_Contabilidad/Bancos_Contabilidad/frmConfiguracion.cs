@@ -19,7 +19,7 @@ namespace Bancos_Contabilidad
         {
             InitializeComponent();
             llenarCombo();
-            btnGuardar.Enabled = txtIdentificacion.Enabled = txtNombre.Enabled = txtRazon.Enabled = txtDireccion.Enabled = txtTelefono.Enabled = true;
+            btnGuardar.Enabled = txtIdentificacion.Enabled = txtNombre.Enabled = txtRazon.Enabled = txtDireccion.Enabled = txtTelefono.Enabled = cmbPais.Enabled = cmbMoneda.Enabled = true;
             btnNuevo.Enabled = btnEditar.Enabled = btnEliminar.Enabled = false;
             estado = "insertar";
         }
@@ -36,6 +36,7 @@ namespace Bancos_Contabilidad
             txtIdentificacion.Text = iden;
             cmbMoneda.Text = mon;
             cmbPais.Text = pais;
+            
         }
 
         public void llenarCombo()

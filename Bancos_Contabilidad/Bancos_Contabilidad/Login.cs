@@ -25,7 +25,7 @@ namespace Bancos_Contabilidad
             mp.Show();
             this.Hide();
 
-            CapaEntidad.idemp = "1";
+            CapaEntidad.idemp = "2";
             
         }
     }

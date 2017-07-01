@@ -9,11 +9,10 @@ namespace Bancos_Contabilidad
 {
     class CapaNegocio
     {
-
         #region Poliza
         public void insertPoliza(CapaEntidad.poliza p)
         {
-            if (string.IsNullOrWhiteSpace(p.Nombre) || string.IsNullOrWhiteSpace(p.Total) || string.IsNullOrWhiteSpace(p.Cuenta))
+            if (string.IsNullOrWhiteSpace(p.Descripcion) || string.IsNullOrWhiteSpace(p.Nombre) || string.IsNullOrWhiteSpace(p.Fecha))
             {
                 MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
@@ -33,7 +32,7 @@ namespace Bancos_Contabilidad
         }
         public void actualizarPoliza(CapaEntidad.poliza p)
         {
-            if (string.IsNullOrWhiteSpace(p.Nombre) || string.IsNullOrWhiteSpace(p.Total) || string.IsNullOrWhiteSpace(p.Cuenta))
+            if (string.IsNullOrWhiteSpace(p.Descripcion) || string.IsNullOrWhiteSpace(p.Nombre) || string.IsNullOrWhiteSpace(p.Fecha))
             {
                 MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
@@ -71,6 +70,50 @@ namespace Bancos_Contabilidad
                     MessageBox.Show("No se pudo eliminar la Poliza", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
 
+            }
+        }
+        #endregion
+
+        #region Detalle Poliza
+        public void insertDetallePoliza(CapaEntidad.DetallePoliza dp, DataGridView dg)
+        {
+            if (string.IsNullOrWhiteSpace(dp.Poliza1))
+            {
+                MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                int resultado = CapaDatos.agregarDetallePoliza(dp,dg);
+
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Poliza Guardado Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo guardar la Poliza", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+        }
+
+        public void editarDetallePoliza(CapaEntidad.DetallePoliza dp, DataGridView dg)
+        {
+            if (string.IsNullOrWhiteSpace(dp.Poliza1))
+            {
+                MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                int resultado = CapaDatos.editarDetallePoliza(dp, dg);
+
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Detalle de poliza editado cone exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo editar el detalle de la Poliza", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
         }
         #endregion
@@ -334,7 +377,6 @@ namespace Bancos_Contabilidad
             }
         }
         #endregion
-
     }
 
 

@@ -11,13 +11,12 @@ namespace Bancos_Contabilidad
 
         public static string idemp;
         public static MRP_BD con = new MRP_BD("sa", "Cocodrilo13", "SAD2017", "JREVMENPC");
-
+        
         public class poliza{
             string ID;
             string nombre;
-            string total;
+            string descripcion;
             string fecha;
-            string cuenta;
             string empresa;
             string status;
 
@@ -34,19 +33,6 @@ namespace Bancos_Contabilidad
                 }
             }
 
-            public string Total
-            {
-                get
-                {
-                    return total;
-                }
-
-                set
-                {
-                    total = value;
-                }
-            }
-
             public string Fecha
             {
                 get
@@ -57,19 +43,6 @@ namespace Bancos_Contabilidad
                 set
                 {
                     fecha = value;
-                }
-            }
-
-            public string Cuenta
-            {
-                get
-                {
-                    return cuenta;
-                }
-
-                set
-                {
-                    cuenta = value;
                 }
             }
 
@@ -109,6 +82,78 @@ namespace Bancos_Contabilidad
                 set
                 {
                     status = value;
+                }
+            }
+
+            public string Descripcion
+            {
+                get
+                {
+                    return descripcion;
+                }
+
+                set
+                {
+                    descripcion = value;
+                }
+            }
+        }
+        public class DetallePoliza
+        {
+            string Poliza;
+            string Cuenta;
+            string clasificacion;
+            string valor;
+
+            public string Poliza1
+            {
+                get
+                {
+                    return Poliza;
+                }
+
+                set
+                {
+                    Poliza = value;
+                }
+            }
+
+            public string Cuenta1
+            {
+                get
+                {
+                    return Cuenta;
+                }
+
+                set
+                {
+                    Cuenta = value;
+                }
+            }
+
+            public string Clasificacion
+            {
+                get
+                {
+                    return clasificacion;
+                }
+
+                set
+                {
+                    clasificacion = value;
+                }
+            }
+
+            public string Valor
+            {
+                get
+                {
+                    return valor;
+                }
+
+                set
+                {
+                    valor = value;
                 }
             }
         }

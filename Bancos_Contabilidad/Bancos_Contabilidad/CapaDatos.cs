@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Sql;
+using System.Data.SqlClient;
 
 namespace Bancos_Contabilidad
 {
@@ -16,7 +18,7 @@ namespace Bancos_Contabilidad
             int i = 0;
             try
             {
-                CapaEntidad.con.insertSQL("INSERT INTO DETALLEPOLIZA VALUES('" + p.Nombre + "','" + p.Total + "','" + p.Fecha + "','" + p.Cuenta + "','" + p.Empresa+"',+'"+p.Status+"')");
+                CapaEntidad.con.insertSQL("INSERT INTO POLIZA VALUES('" + p.Nombre + "','" + p.Descripcion + "','" + p.Fecha + "','" + p.Empresa + "','" + p.Status+"')");
                 i = 1;
             }catch(Exception e)
             {
@@ -29,7 +31,7 @@ namespace Bancos_Contabilidad
             int i = 0;
             try
             {
-                CapaEntidad.con.updateSQL("update detallepoliza set nombre = '"+p.Nombre+"', total = '"+p.Total+"', fecha = '"+p.Fecha+"', idcuentacontable = '"+p.Cuenta+"', idempresa = '"+p.Empresa+"' where idpoliza = '"+p.ID1+"'");
+                CapaEntidad.con.updateSQL("update poliza set nombre = '"+p.Nombre+"', descripcion = '"+p.Descripcion+"', fecha = '"+p.Fecha+"', idempresa = '"+p.Empresa+"' where idpoliza = '"+p.ID1+"'");
                 i = 1;
             }
             catch (Exception e)
@@ -43,12 +45,81 @@ namespace Bancos_Contabilidad
             int i = 0;
             try
             {
-                CapaEntidad.con.updateSQL("update detallepoliza set stat = '0' where idpoliza = '" + p.ID1 + "'");
+                CapaEntidad.con.updateSQL("update poliza set stat = '0' where idpoliza = '" + p.ID1 + "'");
                 i = 1;
             }
             catch (Exception e)
             {
                 i = 0;
+            }
+            return i;
+        }
+        #endregion
+
+        #region DetallePoliza
+        public static int agregarDetallePoliza(CapaEntidad.DetallePoliza dp, DataGridView dg)
+        {
+            int i = 0;
+            try
+            {
+                foreach (DataGridViewRow row in dg.Rows)
+                {
+                    dp.Cuenta1 = row.Cells[0].Value.ToString();
+                    string[] cortador = dp.Cuenta1.Split('-');
+                    string nomenclatura = cortador[0];
+                    string nombrecuenta = cortador[1];
+                    try
+                    {
+                        PruebaConexion.Conexion con = new PruebaConexion.Conexion();
+                        con.cmd = new SqlCommand("Select rtrim(idcuenta) from CUENTACONTABLE where nomenclatura = '" + nomenclatura + "' AND nombre = '" + nombrecuenta + "'", con.cn);
+                        con.dr = con.cmd.ExecuteReader();
+                        if (con.dr.Read())
+                            dp.Cuenta1 = con.dr.GetString(0);
+                        con.dr.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("No se pudo obtener el detalle de la poliza " + ex);
+                    }
+
+                    if (row.Cells[1].Value.ToString() == "" && row.Cells[2].Value.ToString() != "")
+                    {
+                        dp.Clasificacion = "Haber";
+                        dp.Valor = row.Cells[2].Value.ToString();
+                    }
+                    else if(row.Cells[2].Value.ToString() == "" && row.Cells[1].Value.ToString() != "")
+                    {
+                        dp.Clasificacion = "Debe";
+                        dp.Valor = row.Cells[1].Value.ToString();
+                    }
+
+                    CapaEntidad.con.insertSQL("INSERT INTO DETALLEPOLIZA VALUES('" + dp.Poliza1 + "','" + dp.Cuenta1 + "','" + dp.Clasificacion + "','" + dp.Valor + "')");
+                    i = 1;
+                }
+                
+            }
+            catch (Exception e)
+            {
+                i = 0;
+            }
+            return i;
+        }
+
+        public static int editarDetallePoliza(CapaEntidad.DetallePoliza dp, DataGridView dg)
+        {
+            int i = 1;
+            try
+            {
+                PruebaConexion.Conexion con = new PruebaConexion.Conexion();
+                con.cmd = new SqlCommand("delete from DETALLEPOLIZA where idPoliza = '"+dp.Poliza1+"'", con.cn);
+                con.dr = con.cmd.ExecuteReader();
+                con.dr.Close();
+                agregarDetallePoliza(dp, dg);
+            }
+            catch (Exception ex)
+            {
+                i = 0;
+                MessageBox.Show("No se pudo obtener el detalle de la poliza " + ex);
             }
             return i;
         }
