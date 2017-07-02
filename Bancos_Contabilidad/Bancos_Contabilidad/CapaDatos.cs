@@ -243,5 +243,53 @@ namespace Bancos_Contabilidad
         #endregion
 
     }
+	 public static int agregarTipoTransaccion(CapaEntidad.tipoTransaccion p)
+        {
+            int i = 0;
+            try
+            {
+                CapaEntidad.con.insertSQL("INSERT INTO TIPOTRANS VALUES('" + p.EstadoTrans + "','" + p.NombreTrans + "','" + p.AccionTrans + "')");
+                i = 1;
+            }
+            catch (Exception e)
+            {
+                i = 0;
+            }
+            return i;
+        }
+        public static int actualizarTipoTransaccion(CapaEntidad.tipoTransaccion p)
+        {
+            int i = 0;
+            try
+            {
+
+                CapaEntidad.con.updateSQL("update tipotrans set nombre = '" + p.NombreTrans + "', accion = '" + p.AccionTrans + "', stat = '" + p.EstadoTrans +  "' where idtipotrans= '" + p.IdTipoTrans + "'");
+                i = 1;
+            }
+            catch (Exception e)
+            {
+                i = 0;
+            }
+            return i;
+        }
+        public static int eliminarTipoTransaccion(CapaEntidad.tipoTransaccion p)
+        {
+            int i = 0;
+            try
+            {
+                CapaEntidad.con.updateSQL("update TIPOTRANS set stat = '0' where idtipotrans = '" + p.IdTipoTrans + "'");
+                i = 1;
+            }
+            catch (Exception e)
+            {
+                i = 0;
+            }
+            return i;
+        }
+        #endregion
+
+    }
+
 }
+
 

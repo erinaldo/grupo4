@@ -501,6 +501,68 @@ namespace Bancos_Contabilidad
                 }
             }
         }
-    }
+    
+	   public class tipoTransaccion
+        {
+            string idTipoTrans;
+            string nombreTrans;
+            string accionTrans;
+            string estadoTrans;
+
+
+
+            public string NombreTrans
+            {
+                get
+                {
+                    return nombreTrans;
+                }
+
+                set
+                {
+                    nombreTrans = value;
+                }
+            }
+
+            public string AccionTrans
+            {
+                get
+                {
+                    return accionTrans;
+                }
+
+                set
+                {
+                    accionTrans = value;
+                }
+            }
+
+            public string EstadoTrans
+            {
+                get
+                {
+                    return estadoTrans;
+                }
+
+                set
+                {
+                    estadoTrans = value;
+                }
+            }
+
+            public string IdTipoTrans
+            {
+                get
+                {
+                    return idTipoTrans;
+                }
+
+                set
+                {
+                    idTipoTrans = value;
+                }
+            }
+        }
+        }
 
 }

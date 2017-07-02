@@ -334,6 +334,69 @@ namespace Bancos_Contabilidad
             }
         }
         #endregion
+		  //TipoTransaccion
+        public void insertTipoTransaccion(CapaEntidad.tipoTransaccion p)
+        {
+            if (string.IsNullOrWhiteSpace(p.NombreTrans) || string.IsNullOrWhiteSpace(p.AccionTrans) || string.IsNullOrWhiteSpace(p.EstadoTrans))
+            {
+                MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                int resultado = CapaDatos.agregarTipoTransaccion(p);
+
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Tipo transaccion guardado con exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo guardar tipo transaccion", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+            }
+        }
+        public void actualizarTipoTransaccion(CapaEntidad.tipoTransaccion p)
+        {
+            if (string.IsNullOrWhiteSpace(p.NombreTrans) || string.IsNullOrWhiteSpace(p.AccionTrans) || string.IsNullOrWhiteSpace(p.EstadoTrans))
+            {
+                MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                int resultado = CapaDatos.actualizarTipoTransaccion(p);
+
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Tipo transaccion Editada Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo editar tipo transaccion", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
+            }
+        }
+        public void eliminarTipoTransaccion(CapaEntidad.tipoTransaccion p)
+        {
+            if (string.IsNullOrWhiteSpace(p.IdTipoTrans))
+            {
+                MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                int resultado = CapaDatos.eliminarTipoTransaccion(p);
+
+                if (resultado > 0)
+                {
+                    MessageBox.Show("Tipo transaccion Eliminada Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo eliminar tipo transaccion", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
+
+            }
+        }
 
     }
 
