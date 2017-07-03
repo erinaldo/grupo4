@@ -9,8 +9,9 @@ namespace Bancos_Contabilidad
     class CapaEntidad
     {
 
-        public static string idemp;
-        public static MRP_BD con = new MRP_BD("sa", "Cocodrilo13", "SAD2017", "JREVMENPC");
+        public static string idemp, idcuenta;
+        public static MRP_BD con = new MRP_BD("adminseminario", "S@dseminario", "ERPSeminario", "erpseminario.database.windows.net");
+        //public static MRP_BD con = new MRP_BD("sa", "Cocodrilo13", "SAD2017", "erpseminario.database.windows.net");
 
         public class poliza{
             string ID;
@@ -498,6 +499,107 @@ namespace Bancos_Contabilidad
                 set
                 {
                     pais = value;
+                }
+            }
+        }
+        public class Autorizacion
+        {
+            private string id;
+            private string descripcion;
+            private string monto;
+            private string estado;
+            private string tipopago;
+            private string tabla;
+            private string beneficiario;
+
+            public string Id
+            {
+                get
+                {
+                    return id;
+                }
+
+                set
+                {
+                    id = value;
+                }
+            }
+
+            public string Descripcion
+            {
+                get
+                {
+                    return descripcion;
+                }
+
+                set
+                {
+                    descripcion = value;
+                }
+            }
+            
+            public string Monto
+            {
+                get
+                {
+                    return monto;
+                }
+
+                set
+                {
+                    monto = value;
+                }
+            }
+
+            public string Estado
+            {
+                get
+                {
+                    return estado;
+                }
+
+                set
+                {
+                    estado = value;
+                }
+            }
+
+            public string Tipopago
+            {
+                get
+                {
+                    return tipopago;
+                }
+
+                set
+                {
+                    tipopago = value;
+                }
+            }
+
+            public string Tabla
+            {
+                get
+                {
+                    return tabla;
+                }
+
+                set
+                {
+                    tabla = value;
+                }
+            }
+
+            public string Beneficiario
+            {
+                get
+                {
+                    return beneficiario;
+                }
+
+                set
+                {
+                    beneficiario = value;
                 }
             }
         }

@@ -23,7 +23,7 @@ namespace Bancos_Contabilidad
 
         public void ActualizarGrid()
         {
-            grdDoc.DataSource = CapaEntidad.con.getSQL("SELECT rtrim(idDocumento) as ID, rtrim(serieDocumento) as Documento, rtrim(descripcon) as Descripcion, rtrim(fecha) as Fecha, rtrim(MONTO) as Monto  FROM DOCUMENTOREF where stat <> '0';");
+            grdDoc.DataSource = CapaEntidad.con.getSQL("select idautorizacion as Codigo, descripcion as Descripcion, fecha as Fecha, Monto as Total from Autorizacion order by fecha desc;");
         }
 
         private void frmPrincipalAutorizacion_Load(object sender, EventArgs e)
@@ -52,19 +52,19 @@ namespace Bancos_Contabilidad
         {
             if (cmbBuscar.Text == "Codigo")
             {
-                grdDoc.DataSource = CapaEntidad.con.getSQL("SELECT rtrim(idDocumento) as ID, rtrim(serieDocumento) as Documento, rtrim(descripcon) as Descripcion, rtrim(fecha) as Fecha, rtrim(MONTO) as Monto  FROM DOCUMENTOREF where stat <> '0' AND idDocumento LIKE '" + txtBuscar.Text + "%'");
+                grdDoc.DataSource = CapaEntidad.con.getSQL("select idautorizacion as Codigo, descripcion as Descripcion, fecha as Fecha, Monto as Total from Autorizacion  Where idautorizacion LIKE '" + txtBuscar.Text + "%'  order by fecha desc");
             }
-            else if (cmbBuscar.Text == "Documento")
+            else if (cmbBuscar.Text == "Fecha")
             {
-                grdDoc.DataSource = CapaEntidad.con.getSQL("SELECT rtrim(idDocumento) as ID, rtrim(serieDocumento) as Documento, rtrim(descripcon) as Descripcion, rtrim(fecha) as Fecha, rtrim(MONTO) as Monto  FROM DOCUMENTOREF where stat <> '0'AND serieDocumento LIKE '" + txtBuscar.Text + "%'");
+                grdDoc.DataSource = CapaEntidad.con.getSQL("select idautorizacion as Codigo, descripcion as Descripcion, fecha as Fecha, Monto as Total from Autorizacion Where fecha LIKE '" + txtBuscar.Text + "%'  order by fecha desc");
             }
             else if (cmbBuscar.Text == "Descripcion")
             {
-                grdDoc.DataSource = CapaEntidad.con.getSQL("SELECT rtrim(idDocumento) as ID, rtrim(serieDocumento) as Documento, rtrim(descripcon) as Descripcion, rtrim(fecha) as Fecha, rtrim(MONTO) as Monto  FROM DOCUMENTOREF where stat <> '0' AND descripcon LIKE '" + txtBuscar.Text + "%'");
+                grdDoc.DataSource = CapaEntidad.con.getSQL("select idautorizacion as Codigo, descripcion as Descripcion, fecha as Fecha, Monto as Total from Autorizacion Where descripcion LIKE '" + txtBuscar.Text + "%'  order by fecha desc");
             }
             else if (cmbBuscar.Text == "Monto")
             {
-                grdDoc.DataSource = CapaEntidad.con.getSQL("SELECT rtrim(idDocumento) as ID, rtrim(serieDocumento) as Documento, rtrim(descripcon) as Descripcion, rtrim(fecha) as Fecha, rtrim(MONTO) as Monto  FROM DOCUMENTOREF where stat <> '0' AND MONTO LIKE '" + txtBuscar.Text + "%'");
+                grdDoc.DataSource = CapaEntidad.con.getSQL("select idautorizacion as Codigo, descripcion as Descripcion, fecha as Fecha, Monto as Total from Autorizacion Where Monto LIKE '" + txtBuscar.Text + "%'  order by fecha desc");
             }
 
         }

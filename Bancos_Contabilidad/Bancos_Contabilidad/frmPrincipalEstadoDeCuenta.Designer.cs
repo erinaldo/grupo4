@@ -71,6 +71,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(200, 20);
             this.txtBuscar.TabIndex = 27;
+            this.txtBuscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtBuscar_KeyUp);
             // 
             // cmbBuscar
             // 
@@ -79,8 +80,8 @@
             this.cmbBuscar.Items.AddRange(new object[] {
             "Codigo",
             "Nombre",
-            "Direccion",
-            "Telefono"});
+            "Numero",
+            "Banco"});
             this.cmbBuscar.Location = new System.Drawing.Point(6, 61);
             this.cmbBuscar.Name = "cmbBuscar";
             this.cmbBuscar.Size = new System.Drawing.Size(146, 21);
@@ -103,6 +104,7 @@
             this.btnIrUltimo.Size = new System.Drawing.Size(48, 42);
             this.btnIrUltimo.TabIndex = 22;
             this.btnIrUltimo.UseVisualStyleBackColor = true;
+            this.btnIrUltimo.Click += new System.EventHandler(this.btnIrUltimo_Click);
             // 
             // btnSiguiente
             // 
@@ -112,6 +114,7 @@
             this.btnSiguiente.Size = new System.Drawing.Size(48, 42);
             this.btnSiguiente.TabIndex = 21;
             this.btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
             // btnAnterior
             // 
@@ -121,6 +124,7 @@
             this.btnAnterior.Size = new System.Drawing.Size(48, 42);
             this.btnAnterior.TabIndex = 20;
             this.btnAnterior.UseVisualStyleBackColor = true;
+            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
             // 
             // btnIrPrimero
             // 
@@ -130,6 +134,7 @@
             this.btnIrPrimero.Size = new System.Drawing.Size(48, 42);
             this.btnIrPrimero.TabIndex = 19;
             this.btnIrPrimero.UseVisualStyleBackColor = true;
+            this.btnIrPrimero.Click += new System.EventHandler(this.btnIrPrimero_Click);
             // 
             // btnRefrescar
             // 
@@ -139,6 +144,7 @@
             this.btnRefrescar.Size = new System.Drawing.Size(48, 42);
             this.btnRefrescar.TabIndex = 18;
             this.btnRefrescar.UseVisualStyleBackColor = true;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
             // btnNuevo
             // 
@@ -172,6 +178,7 @@
             this.grdEmpresa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdEmpresa.Size = new System.Drawing.Size(847, 251);
             this.grdEmpresa.TabIndex = 25;
+            this.grdEmpresa.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdEmpresa_CellContentDoubleClick);
             // 
             // frmPrincipalEstadoDeCuenta
             // 

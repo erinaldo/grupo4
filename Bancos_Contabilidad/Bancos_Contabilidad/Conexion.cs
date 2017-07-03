@@ -23,7 +23,7 @@ namespace PruebaConexion
                 //cn = new SqlConnection("Data Source=JREVMENPC;Initial Catalog=Tutorial;Integrated Security=True");
                 //cn = new SqlConnection("Data Source = JREVMENPC; Integrated Security = False; User ID = sa; Password = Cocodrilo13; Connect Timeout = 15; //Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False; Initial Catalog = SAD2017");
                // cn.Open();
-			    cn = new SqlConnection("Data Source = JREVMENPC; Integrated Security = False; User ID = sa; Password = Cocodrilo13; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False; Initial Catalog = SAD2017");
+			    cn = new SqlConnection("Data Source = erpseminario.database.windows.net; Integrated Security = False; User ID = adminseminario; Password = S@dseminario; Connect Timeout = 15; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False; Initial Catalog = ERPSeminario");
                 cn.Open();
                 //MessageBox.Show("Conectado");
 

@@ -314,27 +314,43 @@ namespace Bancos_Contabilidad
         }
         public void eliminarCuenta(CapaEntidad.cuentaBancos p)
         {
-           // if (string.IsNullOrWhiteSpace(p.Nombre_cuenta))
+            // if (string.IsNullOrWhiteSpace(p.Nombre_cuenta))
             //{
-               // MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            // MessageBox.Show("Hay Uno o mas Campos Vacios!", "Campos Vacios!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             //}
             //else
             //{
-                int resultado = CapaDatos.eliminarCuenta(p);
+            int resultado = CapaDatos.eliminarCuenta(p);
 
-                if (resultado > 0)
-                {
-                    MessageBox.Show("Cuenta Eliminada Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("No se pudo eliminar la Poliza", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-
+            if (resultado > 0)
+            {
+                MessageBox.Show("Cuenta Eliminada Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else
+            {
+                MessageBox.Show("No se pudo eliminar la Poliza", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
         }
+
         #endregion
 
+        #region Autorizacion
+        public void insertarAutorizacion(CapaEntidad.Autorizacion p)
+        {
+            int resultado = CapaDatos.agregarAutorizacion(p);
+            if (resultado > 0)
+            {
+                MessageBox.Show("Documento Guardado Con Exito!!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("No se pudo guardar el Documento", "Fallo!!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+        }
+        #endregion
     }
+}
 
 

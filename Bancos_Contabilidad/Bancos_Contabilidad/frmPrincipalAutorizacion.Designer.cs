@@ -79,7 +79,7 @@
             this.cmbBuscar.FormattingEnabled = true;
             this.cmbBuscar.Items.AddRange(new object[] {
             "Codigo",
-            "Documento",
+            "Fecha",
             "Descripcion",
             "Monto"});
             this.cmbBuscar.Location = new System.Drawing.Point(6, 61);

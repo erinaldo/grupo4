@@ -242,6 +242,25 @@ namespace Bancos_Contabilidad
         }
         #endregion
 
+        #region Autorizacion
+        public static int agregarAutorizacion(CapaEntidad.Autorizacion p)
+        {
+            string query;
+            int i = 0;
+            try
+            {
+                query = "exec SP_Autorizacion "+p.Id+", '" + p.Descripcion + "', " + p.Monto + ", '" + p.Estado + "', " + p.Tipopago + ", " + CapaEntidad.idcuenta + ", " + CapaEntidad.idemp + ", '"+p.Beneficiario+"'; ";
+                CapaEntidad.con.insertSQL(query);
+
+                i = 1;
+            }
+            catch (Exception e)
+            {
+                i = 0;
+            }
+            return i;
+        }
+        #endregion
     }
 }
 
